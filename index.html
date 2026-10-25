@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Discover and compare useful AI tools for writing, design, video, coding and productivity.">
+<title>ToolScout AI — Find the right AI tool</title>
+<style>
+:root{--bg:#0b1020;--panel:#121a2d;--panel2:#18233a;--text:#f5f7ff;--muted:#aab6ce;--blue:#76a7ff;--line:#26334e}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0%,#17284b 0,transparent 38%),var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:inherit}.wrap{max-width:1120px;margin:auto;padding:0 22px}
+header{border-bottom:1px solid var(--line);background:#0b1020dd;position:sticky;top:0;backdrop-filter:blur(12px);z-index:5}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-size:1.2rem;font-weight:800;letter-spacing:-.04em}.brand span{color:var(--blue)}.nav a{color:var(--muted);text-decoration:none;font-size:.92rem}
+.hero{text-align:center;padding:76px 0 42px}.eyebrow{color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.75rem}
+h1{font-size:clamp(2.2rem,6vw,4.5rem);line-height:1.04;letter-spacing:-.055em;margin:14px auto;max-width:850px}
+.hero p{color:var(--muted);max-width:650px;margin:16px auto 26px}.search{display:flex;max-width:650px;margin:auto;background:white;border-radius:13px;padding:6px;gap:6px}.search input{border:0;outline:0;flex:1;min-width:0;padding:12px;color:#172033;font-size:1rem}.search button,.primary{border:0;background:#3978ed;color:white;padding:12px 18px;border-radius:9px;font-weight:700;cursor:pointer}
+.section{padding:28px 0 58px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:18px}.section h2{font-size:1.6rem;letter-spacing:-.03em;margin:0}.muted{color:var(--muted)}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 24px}
+.chip{border:1px solid var(--line);color:var(--muted);background:var(--panel);padding:8px 13px;border-radius:99px;cursor:pointer}.chip.active{background:#203c70;border-color:#477ed9;color:white}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:linear-gradient(150deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:16px;padding:19px;display:flex;flex-direction:column;min-height:245px}
+.card-top{display:flex;justify-content:space-between;align-items:center;gap:10px}.logo{width:42px;height:42px;border-radius:12px;background:#253b61;display:grid;place-items:center;font-weight:800;color:#cfe0ff;font-size:1.1rem}.tag{font-size:.72rem;color:#c5d8ff;background:#20385f;border-radius:99px;padding:5px 9px}.card h3{margin:15px 0 5px;font-size:1.15rem}.card p{color:var(--muted);font-size:.91rem;margin:0 0 16px}.card-bottom{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:10px}.pricing{font-size:.78rem;color:#c2cce0}.visit{color:#a9c8ff;text-decoration:none;font-weight:700;font-size:.88rem}.visit:hover{text-decoration:underline}
+.empty{display:none;padding:28px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:14px}
+.notice{background:#17243b;border:1px solid #2c4268;padding:16px;border-radius:12px;color:#c8d5eb;font-size:.88rem}
+footer{border-top:1px solid var(--line);padding:30px 0 45px;color:var(--muted);font-size:.86rem}footer a{color:#b6ceff}.footlinks{display:flex;gap:18px;flex-wrap:wrap;margin:12px 0}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.grid{grid-template-columns:1fr}.hero{padding:55px 0 30px}.search button{padding:10px 12px}.nav{height:62px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><div class="brand">TOOLSCOUT <span>AI</span></div><nav><a href="#tools">Explore tools</a> &nbsp; <a href="#about">About</a></nav></div></header>
+<main>
+<section class="hero wrap">
+<div class="eyebrow">Discover · Compare · Create</div>
+<h1>Find the right AI tool for anything.</h1>
+<p>Explore useful AI tools for writing, design, video, coding and productivity. Start with clear descriptions and find the right tool for your workflow.</p>
+<div class="search"><input id="search" type="search" placeholder="Search tools or what you want to do…" aria-label="Search AI tools"><button id="searchBtn">Search</button></div>
+</section>
+<section class="section wrap" id="tools">
+<div class="section-head"><div><div class="eyebrow">The directory</div><h2>Explore AI tools</h2></div><div class="muted" id="count" aria-live="polite"></div></div>
+<div class="filters" id="filters">
+<button class="chip active" data-cat="All">All tools</button>
+<button class="chip" data-cat="Writing">Writing</button><button class="chip" data-cat="Image">Image</button>
+<button class="chip" data-cat="Video">Video</button><button class="chip" data-cat="Coding">Coding</button><button class="chip" data-cat="Productivity">Productivity</button>
+</div>
+<div class="grid" id="grid"></div><div class="empty" id="empty">No tools match that search. Try another keyword or category.</div>
+</section>
+<section class="section wrap" id="about">
+<div class="notice"><strong>How we choose tools:</strong> We aim to describe tools clearly and distinguish free plans from paid plans. Features, prices and availability can change, so verify details on each provider's website before signing up. Some links may become affiliate links in the future; if they do, we will disclose that clearly.</div>
+</section>
+</main>
+<footer><div class="wrap"><div class="brand">TOOLSCOUT <span>AI</span></div><div class="footlinks"><a href="mailto:hello@example.com">Contact</a><a href="#about">About</a><a href="#disclosure">Affiliate disclosure</a></div><p id="disclosure">Affiliate disclosure: This site may earn a commission if you purchase through qualifying links. This does not change the price you pay. No affiliate relationships are active in this starter version.</p><p>© <span id="year"></span> ToolScout AI. Independent directory; not affiliated with the tools listed.</p></div></footer>
+<script>
+const tools = [
+ {name:"ChatGPT",cat:"Writing",letter:"C",desc:"A general-purpose AI assistant for writing, brainstorming, learning and working with files.",price:"Free tier and paid plans",url:"https://chatgpt.com/"},
+ {name:"Claude",cat:"Writing",letter:"Cl",desc:"An AI assistant useful for writing, analysis, coding and working through long documents.",price:"Free tier and paid plans",url:"https://claude.ai/"},
+ {name:"Canva",cat:"Image",letter:"Ca",desc:"A visual design platform with AI-assisted tools for graphics, presentations and social content.",price:"Free tier and paid plans",url:"https://www.canva.com/"},
+ {name:"Adobe Firefly",cat:"Image",letter:"F",desc:"Generative AI tools for creating and editing images and other creative assets.",price:"Free credits and paid plans",url:"https://firefly.adobe.com/"},
+ {name:"Runway",cat:"Video",letter:"R",desc:"AI-powered creative tools for generating and editing video.",price:"Limited free access and paid plans",url:"https://runwayml.com/"},
+ {name:"CapCut",cat:"Video",letter:"C",desc:"A video editor with AI-assisted features for short-form and longer video projects.",price:"Free features and paid plans",url:"https://www.capcut.com/"},
+ {name:"Cursor",cat:"Coding",letter:"Cu",desc:"An AI-powered code editor designed to help developers understand and write code.",price:"Free tier and paid plans",url:"https://www.cursor.com/"},
+ {name:"Replit",cat:"Coding",letter:"Re",desc:"An online development environment with AI features for building and deploying apps.",price:"Free tier and paid plans",url:"https://replit.com/"},
+ {name:"Notion",cat:"Productivity",letter:"N",desc:"A workspace for notes, documents and project management with integrated AI features.",price:"Free tier; AI features vary by plan",url:"https://www.notion.com/"},
+ {name:"Make",cat:"Productivity",letter:"M",desc:"A visual automation platform for connecting apps and building workflows.",price:"Free tier and paid plans",url:"https://www.make.com/"}
+];
+let category="All";
+const grid=document.getElementById("grid"), search=document.getElementById("search"), count=document.getElementById("count"), empty=document.getElementById("empty");
+function render(){
+ const q=search.value.trim().toLowerCase();
+ const matches=tools.filter(t=>(category==="All"||t.cat===category)&&[t.name,t.cat,t.desc].join(" ").toLowerCase().includes(q));
+ grid.innerHTML=matches.map(t=>`<article class="card"><div class="card-top"><div class="logo">${t.letter}</div><span class="tag">${t.cat}</span></div><h3>${t.name}</h3><p>${t.desc}</p><div class="card-bottom"><span class="pricing">${t.price}</span><a class="visit" href="${t.url}" target="_blank" rel="noopener noreferrer">Visit website ↗</a></div></article>`).join("");
+ count.textContent=`${matches.length} tools`;
+ empty.style.display=matches.length?"none":"block";
+}
+document.getElementById("filters").addEventListener("click",e=>{const b=e.target.closest("button[data-cat]");if(!b)return;category=b.dataset.cat;document.querySelectorAll(".chip").forEach(x=>x.classList.toggle("active",x===b));render();});
+search.addEventListener("input",render);document.getElementById("searchBtn").addEventListener("click",render);document.getElementById("year").textContent=new Date().getFullYear();render();
+</script>
+</body></html>
