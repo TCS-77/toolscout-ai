@@ -1,285 +1,276 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Discover 30 useful AI tools for writing, images, video, coding, audio and productivity. Explore and compare AI tools with ToolScout AI.">
-<meta name="theme-color" content="#0b1020">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090711">
+<meta name="description" content="Discover 60 AI tools for writing, design, video, coding, business, research and more.">
 <title>ToolScout AI — Discover the Best AI Tools</title>
 <style>
-:root {
-  --bg:#0b1020;
-  --panel:#121a2d;
-  --panel2:#182540;
-  --text:#f5f7ff;
-  --muted:#aab6ce;
-  --blue:#76a7ff;
-  --line:#26334e;
-}
+:root{--bg:#090711;--panel:#151122;--panel2:#1d1730;--purple:#a78bfa;--text:#f8f7ff;--muted:#a39bb8;--line:#302544}
 *{box-sizing:border-box}
-body{
-  margin:0;background:radial-gradient(circle at 20% 0%,#17284b 0,transparent 38%),var(--bg);
-  color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif
-}
-a{color:inherit}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 50% -15%,#38205f66,transparent 45%),var(--bg);color:var(--text);font:15px/1.6 system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
 button,input{font:inherit}
-.wrap{max-width:1160px;margin:auto;padding:0 22px}
-header{border-bottom:1px solid var(--line);background:#0b1020ed;position:sticky;top:0;backdrop-filter:blur(12px);z-index:5}
-.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand{font-size:1.2rem;font-weight:850;letter-spacing:-.04em}
-.brand span{color:var(--blue)}
-.nav a{color:var(--muted);text-decoration:none;font-size:.92rem;margin-left:18px}
-.nav a:hover{color:white}
-.hero{text-align:center;padding:82px 0 45px}
-.eyebrow{color:var(--blue);font-weight:750;text-transform:uppercase;letter-spacing:.13em;font-size:.75rem}
-h1{font-size:clamp(2.4rem,6vw,4.7rem);line-height:1.04;letter-spacing:-.06em;margin:15px auto;max-width:900px}
-.hero p{color:var(--muted);max-width:660px;margin:18px auto 28px}
-.search{display:flex;max-width:680px;margin:auto;background:white;border-radius:13px;padding:6px;gap:6px}
-.search input{border:0;outline:0;flex:1;min-width:0;padding:12px;color:#172033;font-size:1rem}
-.search button,.primary{border:0;background:#3978ed;color:white;padding:12px 19px;border-radius:9px;font-weight:750;cursor:pointer}
-.search button:hover,.primary:hover{background:#5590ff}
-.hero-note{font-size:.82rem;color:var(--muted);margin-top:13px}
-.section{padding:30px 0 58px}
-.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:18px}
-.section h2{font-size:1.65rem;letter-spacing:-.035em;margin:0}
-.muted{color:var(--muted)}
-.featured{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0 40px}
-.feature{
-  background:linear-gradient(140deg,#203b68,#14213a);
-  border:1px solid #35527d;border-radius:16px;padding:19px
-}
-.feature small{color:#b8d2ff;text-transform:uppercase;letter-spacing:.1em;font-weight:750}
-.feature h3{margin:8px 0 5px}
-.feature p{color:#c0cde2;font-size:.9rem;margin:0}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 24px}
-.chip{border:1px solid var(--line);color:var(--muted);background:var(--panel);padding:8px 14px;border-radius:99px;cursor:pointer}
-.chip:hover{border-color:#608bd0;color:white}
-.chip.active{background:#203c70;border-color:#477ed9;color:white}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.card{
-  background:linear-gradient(150deg,var(--panel2),var(--panel));
-  border:1px solid var(--line);border-radius:16px;padding:19px;
-  display:flex;flex-direction:column;min-height:245px;
-  transition:transform .18s,border-color .18s
-}
-.card:hover{transform:translateY(-3px);border-color:#5276ad}
-.card-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
-.logo{width:43px;height:43px;border-radius:12px;background:#253b61;display:grid;place-items:center;font-weight:850;color:#cfe0ff;font-size:1rem}
-.tag{font-size:.72rem;color:#c5d8ff;background:#20385f;border-radius:99px;padding:5px 9px}
-.card h3{margin:15px 0 5px;font-size:1.15rem}
-.card p{color:var(--muted);font-size:.91rem;margin:0 0 16px}
-.card-bottom{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:10px}
-.pricing{font-size:.78rem;color:#c2cce0}
-.details{background:transparent;border:0;color:#a9c8ff;text-decoration:none;font-weight:750;font-size:.88rem;cursor:pointer;padding:5px 0}
-.details:hover{text-decoration:underline}
-.empty{display:none;padding:28px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:14px}
-.notice{background:#17243b;border:1px solid #2c4268;padding:20px;border-radius:12px;color:#c8d5eb;font-size:.9rem}
-.notice h3{margin:0 0 7px;color:white}
-footer{border-top:1px solid var(--line);padding:30px 0 45px;color:var(--muted);font-size:.86rem}
-footer a{color:#b6ceff}
-.footlinks{display:flex;gap:18px;flex-wrap:wrap;margin:12px 0}
-.dialog-backdrop{
-  position:fixed;inset:0;background:#030713c9;z-index:20;
-  display:none;align-items:center;justify-content:center;padding:20px
-}
-.dialog-backdrop.show{display:flex}
-.dialog{
-  width:min(100%,510px);background:#15213a;border:1px solid #3b5277;
-  border-radius:19px;padding:25px;position:relative;box-shadow:0 25px 90px #0009
-}
-.dialog-close{
-  position:absolute;right:15px;top:12px;border:0;background:#263958;color:white;
-  border-radius:9px;width:36px;height:36px;font-size:1.25rem;cursor:pointer
-}
-.dialog h2{margin:12px 45px 5px 0;font-size:1.7rem}
+.wrap{width:min(1180px,calc(100% - 36px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:#090711eF;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{height:70px;display:flex;justify-content:space-between;align-items:center}
+.brand{font-size:1.2rem;font-weight:900;letter-spacing:-.05em}
+.brand span{color:var(--purple)}
+.nav a{color:var(--muted);margin-left:20px;font-size:.9rem}
+.hero{text-align:center;padding:90px 0 55px}
+.badge{display:inline-block;color:#d7c5ff;background:#25183d;border:1px solid #61469a;border-radius:30px;padding:6px 14px;font-size:.75rem;letter-spacing:.1em;font-weight:800}
+h1{font-size:clamp(2.8rem,7vw,5.4rem);line-height:1.03;letter-spacing:-.07em;margin:24px auto;max-width:900px}
+.gradient{background:linear-gradient(100deg,#c4b5fd,#9333ea,#e9d5ff);background-clip:text;color:transparent}
+.hero p{color:var(--muted);max-width:650px;margin:0 auto 25px;font-size:1.03rem}
+.search{display:flex;max-width:680px;margin:auto;background:#171326;border:1px solid #59417c;border-radius:14px;padding:6px;box-shadow:0 0 35px #8b5cf622}
+.search input{flex:1;min-width:0;background:transparent;border:0;outline:0;padding:12px;color:white}
+.search input::placeholder{color:#817992}
+.search button,.primary{background:linear-gradient(135deg,#a78bfa,#7c3aed);border:0;color:white;padding:12px 19px;border-radius:9px;font-weight:800;cursor:pointer}
+.section{padding:35px 0 65px}
+.heading{margin-bottom:22px}
+.eyebrow{color:var(--purple);font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+h2{font-size:1.8rem;letter-spacing:-.04em;margin:5px 0}
+.sub{color:var(--muted);font-size:.9rem}
+.featured{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-bottom:55px}
+.feature{padding:22px;border:1px solid #44305e;border-radius:17px;background:linear-gradient(140deg,#271b40,#151122)}
+.feature h3{margin:12px 0 4px}
+.feature p{color:var(--muted);font-size:.87rem;margin:0}
+.feature-icon{font-size:1.6rem;color:#c4b5fd}
+.toolbar{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;margin:20px 0}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:#151122;border:1px solid var(--line);color:#b4abc6;border-radius:30px;padding:8px 13px;cursor:pointer;font-size:.82rem}
+.chip:hover{border-color:var(--purple);color:white}
+.chip.active{background:#39245e;border-color:#a78bfa;color:white}
+.count{color:var(--muted);font-size:.85rem}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.card{background:linear-gradient(145deg,#1c1630,#110e1b);border:1px solid var(--line);border-radius:16px;padding:20px;min-height:240px;display:flex;flex-direction:column;transition:.2s}
+.card:hover{transform:translateY(-4px);border-color:#9971d9}
+.top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.logo{width:44px;height:44px;display:grid;place-items:center;background:#352451;border:1px solid #59417c;border-radius:13px;color:#e2d4ff;font-weight:900}
+.tag{font-size:.69rem;color:#d5c3ff;background:#34224f;padding:5px 9px;border-radius:30px}
+.card h3{margin:15px 0 5px;font-size:1.12rem}
+.card p{color:var(--muted);font-size:.86rem;margin:0 0 18px}
+.bottom{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;border-top:1px solid #302544;padding-top:13px}
+.price{font-size:.73rem;color:#9289a5}
+.details{background:transparent;border:0;color:#c4aaff;font-weight:800;cursor:pointer}
+.empty{display:none;text-align:center;padding:40px;border:1px dashed var(--line);border-radius:15px;color:var(--muted)}
+.about{padding:25px;background:linear-gradient(135deg,#211733,#110e1c);border:1px solid #44305e;border-radius:18px}
+.about p{color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:.82rem}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.foot a{margin-right:16px}
+.dialog-bg{display:none;position:fixed;inset:0;z-index:30;background:#03020bd9;backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:18px}
+.dialog-bg.show{display:flex}
+.dialog{position:relative;width:min(100%,500px);padding:28px;background:linear-gradient(145deg,#271b40,#110e1b);border:1px solid #7956a5;border-radius:20px;box-shadow:0 25px 90px #000b}
+.close{position:absolute;right:15px;top:13px;background:#38284e;color:white;border:0;border-radius:9px;width:35px;height:35px;cursor:pointer;font-size:20px}
+.dialog h2{margin:16px 40px 7px 0}
 .dialog p{color:var(--muted)}
-.dialog .tag{display:inline-block}
-.dialog-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
-.dialog-actions a{display:inline-block;text-decoration:none}
-.secondary{border:1px solid var(--line);color:white;padding:11px 16px;border-radius:9px;font-weight:700}
-:focus-visible{outline:2px solid #8cb6ff;outline-offset:3px}
-@media(max-width:800px){
-  .grid{grid-template-columns:repeat(2,1fr)}
-  .featured{grid-template-columns:1fr 1fr}
-}
-@media(max-width:560px){
-  .grid,.featured{grid-template-columns:1fr}
-  .hero{padding:55px 0 30px}
-  .search button{padding:10px 12px}
-  .nav{height:62px}
-  .nav a{margin-left:9px;font-size:.82rem}
-  .section-head{align-items:start;flex-direction:column}
-}
+.dialog-price{background:#211833;border:1px solid #44305e;padding:13px;border-radius:10px;color:#dfd1ff;font-size:.87rem}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.secondary{padding:11px 18px;border:1px solid var(--line);background:transparent;color:white;border-radius:9px;cursor:pointer}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid,.featured{grid-template-columns:1fr}.hero{padding:65px 0 40px}.nav{height:62px}.nav a{margin-left:9px;font-size:.8rem}.search button{padding:10px 12px}.toolbar{align-items:start}}
 </style>
 </head>
 <body>
-
 <header>
-  <div class="wrap nav">
-    <div class="brand">TOOLSCOUT <span>AI</span></div>
-    <nav>
-      <a href="#tools">Explore tools</a>
-      <a href="#about">About</a>
-    </nav>
-  </div>
+<div class="wrap nav">
+<a class="brand" href="#">✦ TOOLSCOUT <span>AI</span></a>
+<nav><a href="#tools">Explore</a><a href="#about">About</a></nav>
+</div>
 </header>
 
 <main>
 <section class="hero wrap">
-  <div class="eyebrow">Discover · Compare · Create</div>
-  <h1>Find the right AI tool for anything.</h1>
-  <p>Explore useful AI tools for writing, images, video, coding, audio and productivity. Find the right tool for your next project.</p>
-  <div class="search">
-    <input id="search" type="search" placeholder="Search tools or what you want to do…" aria-label="Search AI tools">
-    <button id="searchBtn">Search</button>
-  </div>
-  <div class="hero-note">Explore 30 AI tools across 6 categories.</div>
+<div class="badge">✦ YOUR AI DISCOVERY PLATFORM</div>
+<h1>Discover tools that<br><span class="gradient">change everything.</span></h1>
+<p>Explore powerful AI tools for creativity, business, learning, productivity and everything in between.</p>
+<div class="search">
+<input id="search" type="search" placeholder="Search tools, categories or ideas..." aria-label="Search AI tools">
+<button id="searchBtn">Search →</button>
+</div>
+<p style="font-size:.8rem;margin-top:14px">Explore 60 AI tools across 12 categories.</p>
 </section>
 
 <section class="wrap section">
-  <div class="section-head">
-    <div>
-      <div class="eyebrow">Start here</div>
-      <h2>Popular starting points</h2>
-    </div>
-  </div>
-  <div class="featured">
-    <article class="feature">
-      <small>For everyday tasks</small>
-      <h3>ChatGPT</h3>
-      <p>Writing, brainstorming, research and everyday assistance.</p>
-    </article>
-    <article class="feature">
-      <small>For creative projects</small>
-      <h3>Canva</h3>
-      <p>Design graphics, presentations and social media content.</p>
-    </article>
-    <article class="feature">
-      <small>For developers</small>
-      <h3>Cursor</h3>
-      <p>Write, understand and work with code using AI assistance.</p>
-    </article>
-  </div>
+<div class="heading">
+<div class="eyebrow">Editor's picks</div>
+<h2>Start exploring</h2>
+<div class="sub">Popular tools to get you started.</div>
+</div>
+<div class="featured">
+<div class="feature"><div class="feature-icon">✧</div><h3>ChatGPT</h3><p>Your everyday AI assistant.</p></div>
+<div class="feature"><div class="feature-icon">◈</div><h3>Midjourney</h3><p>Turn imagination into images.</p></div>
+<div class="feature"><div class="feature-icon">⌘</div><h3>Cursor</h3><p>Build software with AI.</p></div>
+</div>
 </section>
 
-<section class="section wrap" id="tools">
-  <div class="section-head">
-    <div>
-      <div class="eyebrow">The directory</div>
-      <h2>Explore AI tools</h2>
-    </div>
-    <div class="muted" id="count" aria-live="polite"></div>
-  </div>
-
-  <div class="filters" id="filters">
-    <button class="chip active" data-cat="All">All tools</button>
-    <button class="chip" data-cat="Writing">Writing</button>
-    <button class="chip" data-cat="Image">Image</button>
-    <button class="chip" data-cat="Video">Video</button>
-    <button class="chip" data-cat="Coding">Coding</button>
-    <button class="chip" data-cat="Audio">Audio</button>
-    <button class="chip" data-cat="Productivity">Productivity</button>
-  </div>
-
-  <div class="grid" id="grid"></div>
-  <div class="empty" id="empty">No tools match that search. Try another keyword or category.</div>
+<section class="wrap section" id="tools">
+<div class="heading">
+<div class="eyebrow">The collection</div>
+<h2>Explore AI tools</h2>
+<div class="sub">Browse by category or search for exactly what you need.</div>
+</div>
+<div class="toolbar">
+<div class="filters" id="filters"></div>
+<div class="count" id="count" aria-live="polite"></div>
+</div>
+<div class="grid" id="grid"></div>
+<div class="empty" id="empty">No tools found. Try another search or category.</div>
 </section>
 
-<section class="section wrap" id="about">
-  <div class="notice">
-    <h3>About ToolScout AI</h3>
-    ToolScout AI helps people discover useful AI tools without having to search through hundreds of websites. Our directory organizes tools by category and provides introductory descriptions to help you get started.
-    <p><strong>Our approach:</strong> We aim to describe tools clearly and distinguish free access from paid plans where possible. Features, prices and availability can change, so verify details on each provider's website before signing up.</p>
-  </div>
+<section class="wrap section" id="about">
+<div class="about">
+<div class="eyebrow">Our mission</div>
+<h2>Less searching. More creating.</h2>
+<p>ToolScout AI helps you discover useful AI tools in one place. Browse categories, compare introductory descriptions and visit official websites to learn more.</p>
+<p>Features and pricing can change. Always check the provider's website for current information.</p>
+</div>
 </section>
 </main>
 
 <footer>
-  <div class="wrap">
-    <div class="brand">TOOLSCOUT <span>AI</span></div>
-    <div class="footlinks">
-      <a href="mailto:hello@example.com">Contact</a>
-      <a href="#about">About</a>
-      <a href="#disclosure">Affiliate disclosure</a>
-    </div>
-    <p id="disclosure">Affiliate disclosure: No affiliate relationships are active in this version. If qualifying affiliate links are added in the future, we will disclose them clearly.</p>
-    <p>© <span id="year"></span> ToolScout AI. Independent directory; not affiliated with the tools listed.</p>
-  </div>
+<div class="wrap">
+<div class="foot">
+<strong>✦ TOOLSCOUT <span style="color:#a78bfa">AI</span></strong>
+<div><a href="mailto:hello@example.com">Contact</a><a href="#about">About</a><a href="#disclosure">Affiliate disclosure</a></div>
+</div>
+<p id="disclosure">No affiliate relationships are active in this version. Any future affiliate links will be clearly disclosed. ToolScout AI is an independent directory.</p>
+<p>© <span id="year"></span> ToolScout AI. All rights reserved.</p>
+</div>
 </footer>
 
-<div class="dialog-backdrop" id="backdrop" role="presentation">
-  <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle">
-    <button class="dialog-close" id="closeDialog" aria-label="Close details">×</button>
-    <span class="tag" id="dialogCat"></span>
-    <h2 id="dialogTitle"></h2>
-    <p id="dialogDesc"></p>
-    <p><strong>Pricing:</strong> <span id="dialogPrice"></span></p>
-    <div class="dialog-actions">
-      <a class="primary" id="dialogVisit" href="#" target="_blank" rel="noopener noreferrer">Visit official website ↗</a>
-      <button class="secondary" id="dialogDone">Close</button>
-    </div>
-  </section>
+<div class="dialog-bg" id="backdrop" role="presentation">
+<section class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle">
+<button class="close" id="closeDialog" aria-label="Close">×</button>
+<span class="tag" id="dialogCat"></span>
+<h2 id="dialogTitle"></h2>
+<p id="dialogDesc"></p>
+<div class="dialog-price"><strong>Pricing</strong><br><span id="dialogPrice"></span><br><small>Check the official provider for current prices.</small></div>
+<div class="actions">
+<a class="primary" id="dialogVisit" href="#" target="_blank" rel="noopener noreferrer">Visit official website ↗</a>
+<button class="secondary" id="dialogDone">Close</button>
+</div>
+</section>
 </div>
 
 <script>
 const tools = [
- {name:"ChatGPT",cat:"Writing",letter:"C",desc:"A general-purpose AI assistant for writing, brainstorming, learning and working with files.",price:"Free tier and paid plans",url:"https://chatgpt.com/"},
- {name:"Claude",cat:"Writing",letter:"Cl",desc:"An AI assistant useful for writing, analysis, coding and working through long documents.",price:"Free tier and paid plans",url:"https://claude.ai/"},
- {name:"Gemini",cat:"Writing",letter:"G",desc:"Google's AI assistant for questions, writing, research and creative tasks.",price:"Free access and paid plans",url:"https://gemini.google.com/"},
- {name:"Perplexity",cat:"Writing",letter:"P",desc:"An AI-powered search and answer tool that helps explore questions and find sources.",price:"Free tier and paid plans",url:"https://www.perplexity.ai/"},
- {name:"Grammarly",cat:"Writing",letter:"Gr",desc:"Writing assistance for grammar, clarity, tone and AI-assisted writing.",price:"Free tier and paid plans",url:"https://www.grammarly.com/"},
- {name:"DeepL",cat:"Writing",letter:"D",desc:"Translation and writing tools designed to help communicate across languages.",price:"Free tier and paid plans",url:"https://www.deepl.com/"},
- {name:"Canva",cat:"Image",letter:"Ca",desc:"A visual design platform with AI-assisted tools for graphics, presentations and social content.",price:"Free tier and paid plans",url:"https://www.canva.com/"},
- {name:"Adobe Firefly",cat:"Image",letter:"F",desc:"Generative AI tools for creating and editing images and other creative assets.",price:"Free credits and paid plans",url:"https://firefly.adobe.com/"},
- {name:"Ideogram",cat:"Image",letter:"I",desc:"An AI image generator known for creative visuals and text within images.",price:"Free access and paid plans",url:"https://ideogram.ai/"},
- {name:"Leonardo AI",cat:"Image",letter:"L",desc:"AI image generation and creative tools for illustrations, concepts and visual assets.",price:"Free access and paid plans",url:"https://leonardo.ai/"},
- {name:"Recraft",cat:"Image",letter:"R",desc:"AI-powered design and image generation tools for visual assets and graphics.",price:"Free access and paid plans",url:"https://www.recraft.ai/"},
- {name:"Stable Diffusion",cat:"Image",letter:"S",desc:"An image-generation model ecosystem with tools for creating images from prompts.",price:"Varies by platform and setup",url:"https://stability.ai/"},
- {name:"Runway",cat:"Video",letter:"R",desc:"AI-powered creative tools for generating and editing video.",price:"Limited free access and paid plans",url:"https://runwayml.com/"},
- {name:"Pika",cat:"Video",letter:"P",desc:"AI video generation tools for creating and transforming short video clips.",price:"Free access and paid plans",url:"https://pika.art/"},
- {name:"Synthesia",cat:"Video",letter:"S",desc:"Create AI presenter videos using digital avatars and generated speech.",price:"Limited free access and paid plans",url:"https://www.synthesia.io/"},
- {name:"HeyGen",cat:"Video",letter:"H",desc:"AI video creation platform with avatars, translation and voice features.",price:"Free access and paid plans",url:"https://www.heygen.com/"},
- {name:"Descript",cat:"Video",letter:"D",desc:"Edit audio and video using a text-based editing workflow and AI features.",price:"Free tier and paid plans",url:"https://www.descript.com/"},
- {name:"CapCut",cat:"Video",letter:"C",desc:"A video editor with AI-assisted features for short-form and longer video projects.",price:"Free features and paid plans",url:"https://www.capcut.com/"},
- {name:"Cursor",cat:"Coding",letter:"Cu",desc:"An AI-powered code editor designed to help developers understand and write code.",price:"Free tier and paid plans",url:"https://www.cursor.com/"},
- {name:"GitHub Copilot",cat:"Coding",letter:"GH",desc:"An AI coding assistant that helps developers write, explain and improve code.",price:"Free access and paid plans",url:"https://github.com/features/copilot"},
- {name:"Replit",cat:"Coding",letter:"Re",desc:"An online development environment with AI features for building and deploying apps.",price:"Free tier and paid plans",url:"https://replit.com/"},
- {name:"v0",cat:"Coding",letter:"v0",desc:"An AI tool for generating user interfaces and web application designs from prompts.",price:"Free access and paid plans",url:"https://v0.app/"},
- {name:"Windsurf",cat:"Coding",letter:"W",desc:"An AI-powered development environment designed to assist with coding workflows.",price:"Free tier and paid plans",url:"https://windsurf.com/"},
- {name:"ElevenLabs",cat:"Audio",letter:"11",desc:"AI voice generation, text-to-speech and audio tools.",price:"Free tier and paid plans",url:"https://elevenlabs.io/"},
- {name:"Suno",cat:"Audio",letter:"Su",desc:"Create songs and musical ideas using text prompts and AI.",price:"Free access and paid plans",url:"https://suno.com/"},
- {name:"Otter.ai",cat:"Audio",letter:"O",desc:"AI meeting assistant for transcription, notes and conversation summaries.",price:"Free tier and paid plans",url:"https://otter.ai/"},
- {name:"Notion",cat:"Productivity",letter:"N",desc:"A workspace for notes, documents and project management with integrated AI features.",price:"Free tier; AI features vary by plan",url:"https://www.notion.com/"},
- {name:"Make",cat:"Productivity",letter:"M",desc:"A visual automation platform for connecting apps and building workflows.",price:"Free tier and paid plans",url:"https://www.make.com/"},
- {name:"Zapier",cat:"Productivity",letter:"Z",desc:"Connect apps and automate repetitive tasks using workflows and AI features.",price:"Free tier and paid plans",url:"https://zapier.com/"},
- {name:"n8n",cat:"Productivity",letter:"n8n",desc:"A workflow automation platform for connecting services and building custom automations.",price:"Self-hosted option and paid cloud plans",url:"https://n8n.io/"}
+["ChatGPT","Writing","C","AI assistant for writing, brainstorming, learning and everyday tasks.","Free tier and paid plans","https://chatgpt.com/"],
+["Claude","Writing","Cl","AI assistant for writing, analysis, coding and long documents.","Free tier and paid plans","https://claude.ai/"],
+["Gemini","Writing","G","Google AI assistant for research, writing and creative tasks.","Free access and paid plans","https://gemini.google.com/"],
+["Perplexity","Writing","P","AI-powered search and answers with source references.","Free tier and paid plans","https://www.perplexity.ai/"],
+["Grammarly","Writing","Gr","Improve grammar, clarity, tone and written communication.","Free tier and paid plans","https://www.grammarly.com/"],
+["DeepL","Writing","D","Translation and writing tools for communicating across languages.","Free tier and paid plans","https://www.deepl.com/"],
+["QuillBot","Writing","Q","Paraphrasing, summarizing and writing assistance.","Free tier and paid plans","https://quillbot.com/"],
+["Jasper","Writing","J","AI writing platform for marketing and brand content.","Paid plans","https://www.jasper.ai/"],
+["Copy.ai","Writing","Co","AI-assisted copywriting and go-to-market workflows.","Free access and paid plans","https://www.copy.ai/"],
+["Writesonic","Writing","W","AI writing and content creation platform.","Free access and paid plans","https://writesonic.com/"],
+
+["Canva","Image & Design","Ca","Design graphics, presentations and social content with AI features.","Free tier and paid plans","https://www.canva.com/"],
+["Midjourney","Image & Design","M","Create imaginative AI-generated images from text prompts.","Paid plans","https://www.midjourney.com/"],
+["Adobe Firefly","Image & Design","F","Generate and edit images and creative assets with AI.","Free credits and paid plans","https://firefly.adobe.com/"],
+["Ideogram","Image & Design","I","AI image generation, including images with text.","Free access and paid plans","https://ideogram.ai/"],
+["Leonardo AI","Image & Design","L","Create illustrations, concepts and visual assets.","Free access and paid plans","https://leonardo.ai/"],
+["Recraft","Image & Design","R","AI design and image generation for graphics and visual assets.","Free access and paid plans","https://www.recraft.ai/"],
+
+["Runway","Video","Ru","AI tools for generating and editing video.","Limited free access and paid plans","https://runwayml.com/"],
+["Pika","Video","P","Generate and transform short video clips using AI.","Free access and paid plans","https://pika.art/"],
+["Synthesia","Video","S","Create presenter videos using AI avatars and speech.","Paid plans and limited free access","https://www.synthesia.io/"],
+["HeyGen","Video","H","AI video creation with avatars, translation and voice features.","Free access and paid plans","https://www.heygen.com/"],
+["Descript","Video","D","Edit audio and video using text-based editing tools.","Free tier and paid plans","https://www.descript.com/"],
+
+["Cursor","Coding","Cu","AI-powered code editor for understanding and writing code.","Free tier and paid plans","https://www.cursor.com/"],
+["GitHub Copilot","Coding","GH","AI coding assistant for writing and improving software.","Free access and paid plans","https://github.com/features/copilot"],
+["Replit","Coding","Re","Online development environment with AI app-building features.","Free tier and paid plans","https://replit.com/"],
+["v0","Coding","v0","Generate web interfaces and application designs from prompts.","Free access and paid plans","https://v0.app/"],
+["Windsurf","Coding","Wi","AI-assisted development environment and coding workflows.","Free tier and paid plans","https://windsurf.com/"],
+
+["ElevenLabs","Audio & Music","11","AI voice generation, text-to-speech and audio tools.","Free tier and paid plans","https://elevenlabs.io/"],
+["Suno","Audio & Music","Su","Generate songs and musical ideas using text prompts.","Free access and paid plans","https://suno.com/"],
+["Udio","Audio & Music","U","AI music creation and song generation platform.","Free access and paid plans","https://www.udio.com/"],
+["Otter.ai","Audio & Music","O","Transcribe meetings and create conversation summaries.","Free tier and paid plans","https://otter.ai/"],
+["AIVA","Audio & Music","A","AI-assisted music composition for creative projects.","Free access and paid plans","https://www.aiva.ai/"],
+
+["Notion AI","Productivity","N","AI features for notes, documents and project management.","Plan-dependent features","https://www.notion.com/"],
+["Microsoft Copilot","Productivity","MC","AI assistant integrated with Microsoft products and services.","Free access and paid plans","https://copilot.microsoft.com/"],
+["Google NotebookLM","Productivity","N","Work with your sources and create AI-generated summaries.","Free access; features may vary","https://notebooklm.google.com/"],
+["Mem","Productivity","Me","AI-powered workspace for organizing notes and information.","Paid plans","https://mem.ai/"],
+["Motion","Productivity","Mo","AI-assisted planning, scheduling and task management.","Paid plans","https://www.usemotion.com/"],
+
+["Elicit","Research","E","AI research assistant for finding and analyzing academic papers.","Free tier and paid plans","https://elicit.com/"],
+["Consensus","Research","Co","Search scientific research and explore evidence-based answers.","Free tier and paid plans","https://consensus.app/"],
+["ResearchRabbit","Research","R","Discover related academic papers and research connections.","Free access","https://www.researchrabbit.ai/"],
+["Scite","Research","Sc","Explore scientific citations and how research is referenced.","Free access and paid plans","https://scite.ai/"],
+["Semantic Scholar","Research","SS","AI-powered academic search and research discovery.","Free access","https://www.semanticscholar.org/"],
+
+["Surfer SEO","Marketing","S","SEO content research and optimization tools.","Paid plans","https://surferseo.com/"],
+["HubSpot","Marketing","H","Marketing, sales and customer service platform with AI features.","Free tools and paid plans","https://www.hubspot.com/"],
+["AdCreative.ai","Marketing","Ad","Generate advertising creative and marketing assets.","Paid plans","https://www.adcreative.ai/"],
+["Predis.ai","Marketing","P","Create social media content and marketing assets with AI.","Free access and paid plans","https://predis.ai/"],
+["Buffer","Marketing","B","Plan, publish and analyze social media content.","Free tier and paid plans","https://buffer.com/"],
+
+["Shopify","Business","Sh","E-commerce platform with AI-assisted business features.","Paid plans","https://www.shopify.com/"],
+["Intercom","Business","In","Customer service platform with AI support agents.","Paid plans","https://www.intercom.com/"],
+["Pipedrive","Business","Pi","Sales CRM with tools to manage leads and customer relationships.","Paid plans","https://www.pipedrive.com/"],
+["Freshworks","Business","Fr","Business software for customer support and sales with AI features.","Free access and paid plans","https://www.freshworks.com/"],
+["Fireflies.ai","Business","Fi","AI meeting assistant for transcription and meeting insights.","Free tier and paid plans","https://fireflies.ai/"],
+
+["Make","Automation","Ma","Visual platform for connecting apps and automating workflows.","Free tier and paid plans","https://www.make.com/"],
+["Zapier","Automation","Z","Connect apps and automate repetitive tasks.","Free tier and paid plans","https://zapier.com/"],
+["n8n","Automation","n8n","Build custom workflows connecting services and AI models.","Self-hosted and paid cloud plans","https://n8n.io/"],
+["Bardeen","Automation","Ba","Automate browser and work tasks with AI-assisted workflows.","Free access and paid plans","https://www.bardeen.ai/"],
+["Lindy","Automation","Li","Build AI assistants to automate repetitive work tasks.","Free access and paid plans","https://www.lindy.ai/"],
+
+["Khan Academy Khanmigo","Education","K","AI-powered learning and tutoring experience.","Availability and pricing vary","https://www.khanacademy.org/khan-labs"],
+["Duolingo Max","Education","Du","Language-learning platform with AI-powered learning features.","Paid plan; availability varies","https://www.duolingo.com/"],
+["Quizlet","Education","Q","Study tools, flashcards and AI-assisted learning features.","Free tier and paid plans","https://quizlet.com/"],
+["Socratic","Education","So","Learning assistant for exploring school questions and concepts.","Free access; features may vary","https://socratic.org/"],
+["Wolfram Alpha","Education","W","Computational knowledge engine for math and technical learning.","Free access and paid plans","https://www.wolframalpha.com/"],
+
+["Tableau","Data & Analytics","T","Data visualization and business intelligence platform.","Free options and paid plans","https://www.tableau.com/"],
+["Power BI","Data & Analytics","BI","Business analytics and interactive data visualization.","Free options and paid plans","https://powerbi.microsoft.com/"],
+["Julius AI","Data & Analytics","J","Analyze data and create visualizations using natural language.","Free access and paid plans","https://julius.ai/"],
+["Obviously AI","Data & Analytics","O","No-code predictive analytics and machine learning tools.","Paid plans","https://www.obviously.ai/"],
+["DataRobot","Data & Analytics","DR","Enterprise AI and machine learning platform for analytics.","Enterprise plans","https://www.datarobot.com/"]
 ];
 
+const categories = ["All",...new Set(tools.map(t=>t[1]))];
 let category="All";
+
 const grid=document.getElementById("grid");
 const search=document.getElementById("search");
 const count=document.getElementById("count");
 const empty=document.getElementById("empty");
 const backdrop=document.getElementById("backdrop");
+const filters=document.getElementById("filters");
+
+function buildFilters(){
+  filters.innerHTML=categories.map(c=>
+    `<button class="chip ${c==="All"?"active":""}" data-cat="${c}">${c==="All"?"✦ All tools":c}</button>`
+  ).join("");
+}
 
 function render(){
   const q=search.value.trim().toLowerCase();
   const matches=tools.filter(t=>
-    (category==="All"||t.cat===category) &&
-    [t.name,t.cat,t.desc,t.price].join(" ").toLowerCase().includes(q)
+    (category==="All"||t[1]===category)&&
+    t.join(" ").toLowerCase().includes(q)
   );
 
-  grid.innerHTML=matches.map((t,i)=>`
+  grid.innerHTML=matches.map(t=>`
     <article class="card">
-      <div class="card-top">
-        <div class="logo">${t.letter}</div>
-        <span class="tag">${t.cat}</span>
+      <div class="top">
+        <div class="logo">${t[2]}</div>
+        <span class="tag">${t[1]}</span>
       </div>
-      <h3>${t.name}</h3>
-      <p>${t.desc}</p>
-      <div class="card-bottom">
-        <span class="pricing">${t.price}</span>
+      <h3>${t[0]}</h3>
+      <p>${t[3]}</p>
+      <div class="bottom">
+        <span class="price">${t[4]}</span>
         <button class="details" data-tool="${tools.indexOf(t)}">Details →</button>
       </div>
     </article>
@@ -292,11 +283,11 @@ function render(){
 function showDetails(index){
   const t=tools[index];
   if(!t)return;
-  document.getElementById("dialogTitle").textContent=t.name;
-  document.getElementById("dialogCat").textContent=t.cat;
-  document.getElementById("dialogDesc").textContent=t.desc;
-  document.getElementById("dialogPrice").textContent=t.price;
-  document.getElementById("dialogVisit").href=t.url;
+  document.getElementById("dialogTitle").textContent=t[0];
+  document.getElementById("dialogCat").textContent=t[1];
+  document.getElementById("dialogDesc").textContent=t[3];
+  document.getElementById("dialogPrice").textContent=t[4];
+  document.getElementById("dialogVisit").href=t[5];
   backdrop.classList.add("show");
   document.getElementById("closeDialog").focus();
 }
@@ -305,11 +296,13 @@ function closeDetails(){
   backdrop.classList.remove("show");
 }
 
-document.getElementById("filters").addEventListener("click",e=>{
+filters.addEventListener("click",e=>{
   const b=e.target.closest("button[data-cat]");
   if(!b)return;
   category=b.dataset.cat;
-  document.querySelectorAll(".chip").forEach(x=>x.classList.toggle("active",x===b));
+  filters.querySelectorAll(".chip").forEach(x=>
+    x.classList.toggle("active",x===b)
+  );
   render();
 });
 
@@ -322,16 +315,15 @@ search.addEventListener("input",render);
 document.getElementById("searchBtn").addEventListener("click",render);
 document.getElementById("closeDialog").addEventListener("click",closeDetails);
 document.getElementById("dialogDone").addEventListener("click",closeDetails);
-
 backdrop.addEventListener("click",e=>{
   if(e.target===backdrop)closeDetails();
 });
-
 document.addEventListener("keydown",e=>{
   if(e.key==="Escape")closeDetails();
 });
-
 document.getElementById("year").textContent=new Date().getFullYear();
+
+buildFilters();
 render();
 </script>
 </body>
