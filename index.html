@@ -1,75 +1,338 @@
+
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Discover and compare useful AI tools for writing, design, video, coding and productivity.">
-<title>ToolScout AI — Find the right AI tool</title>
+<meta name="description" content="Discover 30 useful AI tools for writing, images, video, coding, audio and productivity. Explore and compare AI tools with ToolScout AI.">
+<meta name="theme-color" content="#0b1020">
+<title>ToolScout AI — Discover the Best AI Tools</title>
 <style>
-:root{--bg:#0b1020;--panel:#121a2d;--panel2:#18233a;--text:#f5f7ff;--muted:#aab6ce;--blue:#76a7ff;--line:#26334e}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0%,#17284b 0,transparent 38%),var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
-a{color:inherit}.wrap{max-width:1120px;margin:auto;padding:0 22px}
-header{border-bottom:1px solid var(--line);background:#0b1020dd;position:sticky;top:0;backdrop-filter:blur(12px);z-index:5}
-.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-size:1.2rem;font-weight:800;letter-spacing:-.04em}.brand span{color:var(--blue)}.nav a{color:var(--muted);text-decoration:none;font-size:.92rem}
-.hero{text-align:center;padding:76px 0 42px}.eyebrow{color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.75rem}
-h1{font-size:clamp(2.2rem,6vw,4.5rem);line-height:1.04;letter-spacing:-.055em;margin:14px auto;max-width:850px}
-.hero p{color:var(--muted);max-width:650px;margin:16px auto 26px}.search{display:flex;max-width:650px;margin:auto;background:white;border-radius:13px;padding:6px;gap:6px}.search input{border:0;outline:0;flex:1;min-width:0;padding:12px;color:#172033;font-size:1rem}.search button,.primary{border:0;background:#3978ed;color:white;padding:12px 18px;border-radius:9px;font-weight:700;cursor:pointer}
-.section{padding:28px 0 58px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:18px}.section h2{font-size:1.6rem;letter-spacing:-.03em;margin:0}.muted{color:var(--muted)}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 24px}
-.chip{border:1px solid var(--line);color:var(--muted);background:var(--panel);padding:8px 13px;border-radius:99px;cursor:pointer}.chip.active{background:#203c70;border-color:#477ed9;color:white}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:linear-gradient(150deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:16px;padding:19px;display:flex;flex-direction:column;min-height:245px}
-.card-top{display:flex;justify-content:space-between;align-items:center;gap:10px}.logo{width:42px;height:42px;border-radius:12px;background:#253b61;display:grid;place-items:center;font-weight:800;color:#cfe0ff;font-size:1.1rem}.tag{font-size:.72rem;color:#c5d8ff;background:#20385f;border-radius:99px;padding:5px 9px}.card h3{margin:15px 0 5px;font-size:1.15rem}.card p{color:var(--muted);font-size:.91rem;margin:0 0 16px}.card-bottom{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:10px}.pricing{font-size:.78rem;color:#c2cce0}.visit{color:#a9c8ff;text-decoration:none;font-weight:700;font-size:.88rem}.visit:hover{text-decoration:underline}
+:root {
+  --bg:#0b1020;
+  --panel:#121a2d;
+  --panel2:#182540;
+  --text:#f5f7ff;
+  --muted:#aab6ce;
+  --blue:#76a7ff;
+  --line:#26334e;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:radial-gradient(circle at 20% 0%,#17284b 0,transparent 38%),var(--bg);
+  color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif
+}
+a{color:inherit}
+button,input{font:inherit}
+.wrap{max-width:1160px;margin:auto;padding:0 22px}
+header{border-bottom:1px solid var(--line);background:#0b1020ed;position:sticky;top:0;backdrop-filter:blur(12px);z-index:5}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-size:1.2rem;font-weight:850;letter-spacing:-.04em}
+.brand span{color:var(--blue)}
+.nav a{color:var(--muted);text-decoration:none;font-size:.92rem;margin-left:18px}
+.nav a:hover{color:white}
+.hero{text-align:center;padding:82px 0 45px}
+.eyebrow{color:var(--blue);font-weight:750;text-transform:uppercase;letter-spacing:.13em;font-size:.75rem}
+h1{font-size:clamp(2.4rem,6vw,4.7rem);line-height:1.04;letter-spacing:-.06em;margin:15px auto;max-width:900px}
+.hero p{color:var(--muted);max-width:660px;margin:18px auto 28px}
+.search{display:flex;max-width:680px;margin:auto;background:white;border-radius:13px;padding:6px;gap:6px}
+.search input{border:0;outline:0;flex:1;min-width:0;padding:12px;color:#172033;font-size:1rem}
+.search button,.primary{border:0;background:#3978ed;color:white;padding:12px 19px;border-radius:9px;font-weight:750;cursor:pointer}
+.search button:hover,.primary:hover{background:#5590ff}
+.hero-note{font-size:.82rem;color:var(--muted);margin-top:13px}
+.section{padding:30px 0 58px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:18px}
+.section h2{font-size:1.65rem;letter-spacing:-.035em;margin:0}
+.muted{color:var(--muted)}
+.featured{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0 40px}
+.feature{
+  background:linear-gradient(140deg,#203b68,#14213a);
+  border:1px solid #35527d;border-radius:16px;padding:19px
+}
+.feature small{color:#b8d2ff;text-transform:uppercase;letter-spacing:.1em;font-weight:750}
+.feature h3{margin:8px 0 5px}
+.feature p{color:#c0cde2;font-size:.9rem;margin:0}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 24px}
+.chip{border:1px solid var(--line);color:var(--muted);background:var(--panel);padding:8px 14px;border-radius:99px;cursor:pointer}
+.chip:hover{border-color:#608bd0;color:white}
+.chip.active{background:#203c70;border-color:#477ed9;color:white}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.card{
+  background:linear-gradient(150deg,var(--panel2),var(--panel));
+  border:1px solid var(--line);border-radius:16px;padding:19px;
+  display:flex;flex-direction:column;min-height:245px;
+  transition:transform .18s,border-color .18s
+}
+.card:hover{transform:translateY(-3px);border-color:#5276ad}
+.card-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.logo{width:43px;height:43px;border-radius:12px;background:#253b61;display:grid;place-items:center;font-weight:850;color:#cfe0ff;font-size:1rem}
+.tag{font-size:.72rem;color:#c5d8ff;background:#20385f;border-radius:99px;padding:5px 9px}
+.card h3{margin:15px 0 5px;font-size:1.15rem}
+.card p{color:var(--muted);font-size:.91rem;margin:0 0 16px}
+.card-bottom{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.pricing{font-size:.78rem;color:#c2cce0}
+.details{background:transparent;border:0;color:#a9c8ff;text-decoration:none;font-weight:750;font-size:.88rem;cursor:pointer;padding:5px 0}
+.details:hover{text-decoration:underline}
 .empty{display:none;padding:28px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:14px}
-.notice{background:#17243b;border:1px solid #2c4268;padding:16px;border-radius:12px;color:#c8d5eb;font-size:.88rem}
-footer{border-top:1px solid var(--line);padding:30px 0 45px;color:var(--muted);font-size:.86rem}footer a{color:#b6ceff}.footlinks{display:flex;gap:18px;flex-wrap:wrap;margin:12px 0}
-@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.grid{grid-template-columns:1fr}.hero{padding:55px 0 30px}.search button{padding:10px 12px}.nav{height:62px}}
+.notice{background:#17243b;border:1px solid #2c4268;padding:20px;border-radius:12px;color:#c8d5eb;font-size:.9rem}
+.notice h3{margin:0 0 7px;color:white}
+footer{border-top:1px solid var(--line);padding:30px 0 45px;color:var(--muted);font-size:.86rem}
+footer a{color:#b6ceff}
+.footlinks{display:flex;gap:18px;flex-wrap:wrap;margin:12px 0}
+.dialog-backdrop{
+  position:fixed;inset:0;background:#030713c9;z-index:20;
+  display:none;align-items:center;justify-content:center;padding:20px
+}
+.dialog-backdrop.show{display:flex}
+.dialog{
+  width:min(100%,510px);background:#15213a;border:1px solid #3b5277;
+  border-radius:19px;padding:25px;position:relative;box-shadow:0 25px 90px #0009
+}
+.dialog-close{
+  position:absolute;right:15px;top:12px;border:0;background:#263958;color:white;
+  border-radius:9px;width:36px;height:36px;font-size:1.25rem;cursor:pointer
+}
+.dialog h2{margin:12px 45px 5px 0;font-size:1.7rem}
+.dialog p{color:var(--muted)}
+.dialog .tag{display:inline-block}
+.dialog-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.dialog-actions a{display:inline-block;text-decoration:none}
+.secondary{border:1px solid var(--line);color:white;padding:11px 16px;border-radius:9px;font-weight:700}
+:focus-visible{outline:2px solid #8cb6ff;outline-offset:3px}
+@media(max-width:800px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .featured{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .grid,.featured{grid-template-columns:1fr}
+  .hero{padding:55px 0 30px}
+  .search button{padding:10px 12px}
+  .nav{height:62px}
+  .nav a{margin-left:9px;font-size:.82rem}
+  .section-head{align-items:start;flex-direction:column}
+}
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><div class="brand">TOOLSCOUT <span>AI</span></div><nav><a href="#tools">Explore tools</a> &nbsp; <a href="#about">About</a></nav></div></header>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">TOOLSCOUT <span>AI</span></div>
+    <nav>
+      <a href="#tools">Explore tools</a>
+      <a href="#about">About</a>
+    </nav>
+  </div>
+</header>
+
 <main>
 <section class="hero wrap">
-<div class="eyebrow">Discover · Compare · Create</div>
-<h1>Find the right AI tool for anything.</h1>
-<p>Explore useful AI tools for writing, design, video, coding and productivity. Start with clear descriptions and find the right tool for your workflow.</p>
-<div class="search"><input id="search" type="search" placeholder="Search tools or what you want to do…" aria-label="Search AI tools"><button id="searchBtn">Search</button></div>
+  <div class="eyebrow">Discover · Compare · Create</div>
+  <h1>Find the right AI tool for anything.</h1>
+  <p>Explore useful AI tools for writing, images, video, coding, audio and productivity. Find the right tool for your next project.</p>
+  <div class="search">
+    <input id="search" type="search" placeholder="Search tools or what you want to do…" aria-label="Search AI tools">
+    <button id="searchBtn">Search</button>
+  </div>
+  <div class="hero-note">Explore 30 AI tools across 6 categories.</div>
 </section>
+
+<section class="wrap section">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Start here</div>
+      <h2>Popular starting points</h2>
+    </div>
+  </div>
+  <div class="featured">
+    <article class="feature">
+      <small>For everyday tasks</small>
+      <h3>ChatGPT</h3>
+      <p>Writing, brainstorming, research and everyday assistance.</p>
+    </article>
+    <article class="feature">
+      <small>For creative projects</small>
+      <h3>Canva</h3>
+      <p>Design graphics, presentations and social media content.</p>
+    </article>
+    <article class="feature">
+      <small>For developers</small>
+      <h3>Cursor</h3>
+      <p>Write, understand and work with code using AI assistance.</p>
+    </article>
+  </div>
+</section>
+
 <section class="section wrap" id="tools">
-<div class="section-head"><div><div class="eyebrow">The directory</div><h2>Explore AI tools</h2></div><div class="muted" id="count" aria-live="polite"></div></div>
-<div class="filters" id="filters">
-<button class="chip active" data-cat="All">All tools</button>
-<button class="chip" data-cat="Writing">Writing</button><button class="chip" data-cat="Image">Image</button>
-<button class="chip" data-cat="Video">Video</button><button class="chip" data-cat="Coding">Coding</button><button class="chip" data-cat="Productivity">Productivity</button>
-</div>
-<div class="grid" id="grid"></div><div class="empty" id="empty">No tools match that search. Try another keyword or category.</div>
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">The directory</div>
+      <h2>Explore AI tools</h2>
+    </div>
+    <div class="muted" id="count" aria-live="polite"></div>
+  </div>
+
+  <div class="filters" id="filters">
+    <button class="chip active" data-cat="All">All tools</button>
+    <button class="chip" data-cat="Writing">Writing</button>
+    <button class="chip" data-cat="Image">Image</button>
+    <button class="chip" data-cat="Video">Video</button>
+    <button class="chip" data-cat="Coding">Coding</button>
+    <button class="chip" data-cat="Audio">Audio</button>
+    <button class="chip" data-cat="Productivity">Productivity</button>
+  </div>
+
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty">No tools match that search. Try another keyword or category.</div>
 </section>
+
 <section class="section wrap" id="about">
-<div class="notice"><strong>How we choose tools:</strong> We aim to describe tools clearly and distinguish free plans from paid plans. Features, prices and availability can change, so verify details on each provider's website before signing up. Some links may become affiliate links in the future; if they do, we will disclose that clearly.</div>
+  <div class="notice">
+    <h3>About ToolScout AI</h3>
+    ToolScout AI helps people discover useful AI tools without having to search through hundreds of websites. Our directory organizes tools by category and provides introductory descriptions to help you get started.
+    <p><strong>Our approach:</strong> We aim to describe tools clearly and distinguish free access from paid plans where possible. Features, prices and availability can change, so verify details on each provider's website before signing up.</p>
+  </div>
 </section>
 </main>
-<footer><div class="wrap"><div class="brand">TOOLSCOUT <span>AI</span></div><div class="footlinks"><a href="mailto:hello@example.com">Contact</a><a href="#about">About</a><a href="#disclosure">Affiliate disclosure</a></div><p id="disclosure">Affiliate disclosure: This site may earn a commission if you purchase through qualifying links. This does not change the price you pay. No affiliate relationships are active in this starter version.</p><p>© <span id="year"></span> ToolScout AI. Independent directory; not affiliated with the tools listed.</p></div></footer>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">TOOLSCOUT <span>AI</span></div>
+    <div class="footlinks">
+      <a href="mailto:hello@example.com">Contact</a>
+      <a href="#about">About</a>
+      <a href="#disclosure">Affiliate disclosure</a>
+    </div>
+    <p id="disclosure">Affiliate disclosure: No affiliate relationships are active in this version. If qualifying affiliate links are added in the future, we will disclose them clearly.</p>
+    <p>© <span id="year"></span> ToolScout AI. Independent directory; not affiliated with the tools listed.</p>
+  </div>
+</footer>
+
+<div class="dialog-backdrop" id="backdrop" role="presentation">
+  <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle">
+    <button class="dialog-close" id="closeDialog" aria-label="Close details">×</button>
+    <span class="tag" id="dialogCat"></span>
+    <h2 id="dialogTitle"></h2>
+    <p id="dialogDesc"></p>
+    <p><strong>Pricing:</strong> <span id="dialogPrice"></span></p>
+    <div class="dialog-actions">
+      <a class="primary" id="dialogVisit" href="#" target="_blank" rel="noopener noreferrer">Visit official website ↗</a>
+      <button class="secondary" id="dialogDone">Close</button>
+    </div>
+  </section>
+</div>
+
 <script>
 const tools = [
  {name:"ChatGPT",cat:"Writing",letter:"C",desc:"A general-purpose AI assistant for writing, brainstorming, learning and working with files.",price:"Free tier and paid plans",url:"https://chatgpt.com/"},
  {name:"Claude",cat:"Writing",letter:"Cl",desc:"An AI assistant useful for writing, analysis, coding and working through long documents.",price:"Free tier and paid plans",url:"https://claude.ai/"},
+ {name:"Gemini",cat:"Writing",letter:"G",desc:"Google's AI assistant for questions, writing, research and creative tasks.",price:"Free access and paid plans",url:"https://gemini.google.com/"},
+ {name:"Perplexity",cat:"Writing",letter:"P",desc:"An AI-powered search and answer tool that helps explore questions and find sources.",price:"Free tier and paid plans",url:"https://www.perplexity.ai/"},
+ {name:"Grammarly",cat:"Writing",letter:"Gr",desc:"Writing assistance for grammar, clarity, tone and AI-assisted writing.",price:"Free tier and paid plans",url:"https://www.grammarly.com/"},
+ {name:"DeepL",cat:"Writing",letter:"D",desc:"Translation and writing tools designed to help communicate across languages.",price:"Free tier and paid plans",url:"https://www.deepl.com/"},
  {name:"Canva",cat:"Image",letter:"Ca",desc:"A visual design platform with AI-assisted tools for graphics, presentations and social content.",price:"Free tier and paid plans",url:"https://www.canva.com/"},
  {name:"Adobe Firefly",cat:"Image",letter:"F",desc:"Generative AI tools for creating and editing images and other creative assets.",price:"Free credits and paid plans",url:"https://firefly.adobe.com/"},
+ {name:"Ideogram",cat:"Image",letter:"I",desc:"An AI image generator known for creative visuals and text within images.",price:"Free access and paid plans",url:"https://ideogram.ai/"},
+ {name:"Leonardo AI",cat:"Image",letter:"L",desc:"AI image generation and creative tools for illustrations, concepts and visual assets.",price:"Free access and paid plans",url:"https://leonardo.ai/"},
+ {name:"Recraft",cat:"Image",letter:"R",desc:"AI-powered design and image generation tools for visual assets and graphics.",price:"Free access and paid plans",url:"https://www.recraft.ai/"},
+ {name:"Stable Diffusion",cat:"Image",letter:"S",desc:"An image-generation model ecosystem with tools for creating images from prompts.",price:"Varies by platform and setup",url:"https://stability.ai/"},
  {name:"Runway",cat:"Video",letter:"R",desc:"AI-powered creative tools for generating and editing video.",price:"Limited free access and paid plans",url:"https://runwayml.com/"},
+ {name:"Pika",cat:"Video",letter:"P",desc:"AI video generation tools for creating and transforming short video clips.",price:"Free access and paid plans",url:"https://pika.art/"},
+ {name:"Synthesia",cat:"Video",letter:"S",desc:"Create AI presenter videos using digital avatars and generated speech.",price:"Limited free access and paid plans",url:"https://www.synthesia.io/"},
+ {name:"HeyGen",cat:"Video",letter:"H",desc:"AI video creation platform with avatars, translation and voice features.",price:"Free access and paid plans",url:"https://www.heygen.com/"},
+ {name:"Descript",cat:"Video",letter:"D",desc:"Edit audio and video using a text-based editing workflow and AI features.",price:"Free tier and paid plans",url:"https://www.descript.com/"},
  {name:"CapCut",cat:"Video",letter:"C",desc:"A video editor with AI-assisted features for short-form and longer video projects.",price:"Free features and paid plans",url:"https://www.capcut.com/"},
  {name:"Cursor",cat:"Coding",letter:"Cu",desc:"An AI-powered code editor designed to help developers understand and write code.",price:"Free tier and paid plans",url:"https://www.cursor.com/"},
+ {name:"GitHub Copilot",cat:"Coding",letter:"GH",desc:"An AI coding assistant that helps developers write, explain and improve code.",price:"Free access and paid plans",url:"https://github.com/features/copilot"},
  {name:"Replit",cat:"Coding",letter:"Re",desc:"An online development environment with AI features for building and deploying apps.",price:"Free tier and paid plans",url:"https://replit.com/"},
+ {name:"v0",cat:"Coding",letter:"v0",desc:"An AI tool for generating user interfaces and web application designs from prompts.",price:"Free access and paid plans",url:"https://v0.app/"},
+ {name:"Windsurf",cat:"Coding",letter:"W",desc:"An AI-powered development environment designed to assist with coding workflows.",price:"Free tier and paid plans",url:"https://windsurf.com/"},
+ {name:"ElevenLabs",cat:"Audio",letter:"11",desc:"AI voice generation, text-to-speech and audio tools.",price:"Free tier and paid plans",url:"https://elevenlabs.io/"},
+ {name:"Suno",cat:"Audio",letter:"Su",desc:"Create songs and musical ideas using text prompts and AI.",price:"Free access and paid plans",url:"https://suno.com/"},
+ {name:"Otter.ai",cat:"Audio",letter:"O",desc:"AI meeting assistant for transcription, notes and conversation summaries.",price:"Free tier and paid plans",url:"https://otter.ai/"},
  {name:"Notion",cat:"Productivity",letter:"N",desc:"A workspace for notes, documents and project management with integrated AI features.",price:"Free tier; AI features vary by plan",url:"https://www.notion.com/"},
- {name:"Make",cat:"Productivity",letter:"M",desc:"A visual automation platform for connecting apps and building workflows.",price:"Free tier and paid plans",url:"https://www.make.com/"}
+ {name:"Make",cat:"Productivity",letter:"M",desc:"A visual automation platform for connecting apps and building workflows.",price:"Free tier and paid plans",url:"https://www.make.com/"},
+ {name:"Zapier",cat:"Productivity",letter:"Z",desc:"Connect apps and automate repetitive tasks using workflows and AI features.",price:"Free tier and paid plans",url:"https://zapier.com/"},
+ {name:"n8n",cat:"Productivity",letter:"n8n",desc:"A workflow automation platform for connecting services and building custom automations.",price:"Self-hosted option and paid cloud plans",url:"https://n8n.io/"}
 ];
+
 let category="All";
-const grid=document.getElementById("grid"), search=document.getElementById("search"), count=document.getElementById("count"), empty=document.getElementById("empty");
+const grid=document.getElementById("grid");
+const search=document.getElementById("search");
+const count=document.getElementById("count");
+const empty=document.getElementById("empty");
+const backdrop=document.getElementById("backdrop");
+
 function render(){
- const q=search.value.trim().toLowerCase();
- const matches=tools.filter(t=>(category==="All"||t.cat===category)&&[t.name,t.cat,t.desc].join(" ").toLowerCase().includes(q));
- grid.innerHTML=matches.map(t=>`<article class="card"><div class="card-top"><div class="logo">${t.letter}</div><span class="tag">${t.cat}</span></div><h3>${t.name}</h3><p>${t.desc}</p><div class="card-bottom"><span class="pricing">${t.price}</span><a class="visit" href="${t.url}" target="_blank" rel="noopener noreferrer">Visit website ↗</a></div></article>`).join("");
- count.textContent=`${matches.length} tools`;
- empty.style.display=matches.length?"none":"block";
+  const q=search.value.trim().toLowerCase();
+  const matches=tools.filter(t=>
+    (category==="All"||t.cat===category) &&
+    [t.name,t.cat,t.desc,t.price].join(" ").toLowerCase().includes(q)
+  );
+
+  grid.innerHTML=matches.map((t,i)=>`
+    <article class="card">
+      <div class="card-top">
+        <div class="logo">${t.letter}</div>
+        <span class="tag">${t.cat}</span>
+      </div>
+      <h3>${t.name}</h3>
+      <p>${t.desc}</p>
+      <div class="card-bottom">
+        <span class="pricing">${t.price}</span>
+        <button class="details" data-tool="${tools.indexOf(t)}">Details →</button>
+      </div>
+    </article>
+  `).join("");
+
+  count.textContent=`${matches.length} of ${tools.length} tools`;
+  empty.style.display=matches.length?"none":"block";
 }
-document.getElementById("filters").addEventListener("click",e=>{const b=e.target.closest("button[data-cat]");if(!b)return;category=b.dataset.cat;document.querySelectorAll(".chip").forEach(x=>x.classList.toggle("active",x===b));render();});
-search.addEventListener("input",render);document.getElementById("searchBtn").addEventListener("click",render);document.getElementById("year").textContent=new Date().getFullYear();render();
+
+function showDetails(index){
+  const t=tools[index];
+  if(!t)return;
+  document.getElementById("dialogTitle").textContent=t.name;
+  document.getElementById("dialogCat").textContent=t.cat;
+  document.getElementById("dialogDesc").textContent=t.desc;
+  document.getElementById("dialogPrice").textContent=t.price;
+  document.getElementById("dialogVisit").href=t.url;
+  backdrop.classList.add("show");
+  document.getElementById("closeDialog").focus();
+}
+
+function closeDetails(){
+  backdrop.classList.remove("show");
+}
+
+document.getElementById("filters").addEventListener("click",e=>{
+  const b=e.target.closest("button[data-cat]");
+  if(!b)return;
+  category=b.dataset.cat;
+  document.querySelectorAll(".chip").forEach(x=>x.classList.toggle("active",x===b));
+  render();
+});
+
+grid.addEventListener("click",e=>{
+  const b=e.target.closest("button[data-tool]");
+  if(b)showDetails(Number(b.dataset.tool));
+});
+
+search.addEventListener("input",render);
+document.getElementById("searchBtn").addEventListener("click",render);
+document.getElementById("closeDialog").addEventListener("click",closeDetails);
+document.getElementById("dialogDone").addEventListener("click",closeDetails);
+
+backdrop.addEventListener("click",e=>{
+  if(e.target===backdrop)closeDetails();
+});
+
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape")closeDetails();
+});
+
+document.getElementById("year").textContent=new Date().getFullYear();
+render();
 </script>
-</body></html>
+</body>
+</html>
