@@ -53,7 +53,7 @@ h2{font-size:1.8rem;letter-spacing:-.04em;margin:5px 0}
 .card{background:linear-gradient(145deg,#1c1630,#110e1b);border:1px solid var(--line);border-radius:16px;padding:20px;min-height:240px;display:flex;flex-direction:column;transition:.2s}
 .card:hover{transform:translateY(-4px);border-color:#9971d9}
 .top{display:flex;justify-content:space-between;align-items:center;gap:8px}
-.logo{width:44px;height:44px;display:grid;place-items:center;background:#352451;border:1px solid #59417c;border-radius:13px;color:#e2d4ff;font-weight:900}
+.logo{width:44px;height:44px;display:grid;place-items:center;background:#211832;border:1px solid #59417c;border-radius:13px;color:#e2d4ff;font-weight:900;overflow:hidden}.logo img{width:25px;height:25px;object-fit:contain}.logo span{grid-area:1/1}.logo img{grid-area:1/1}
 .tag{font-size:.69rem;color:#d5c3ff;background:#34224f;padding:5px 9px;border-radius:30px}
 .card h3{margin:15px 0 5px;font-size:1.12rem}
 .card p{color:var(--muted);font-size:.86rem;margin:0 0 18px}
@@ -559,7 +559,7 @@ function render(){
   grid.innerHTML=matches.map(t=>`
     <article class="card">
       <div class="top">
-        <div class="logo">${t[2]}</div>
+        <div class="logo"><img src="https://www.google.com/s2/favicons?domain=${encodeURIComponent(new URL(t[5]).hostname)}&sz=128" alt="" loading="lazy" onerror="this.remove()"><span>${t[2]}</span></div>
         <span class="tag">${t[1]}</span>
       </div>
       <h3>${t[0]}</h3>
