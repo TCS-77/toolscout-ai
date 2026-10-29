@@ -17,7 +17,7 @@ button,input{font:inherit}
 .wrap{width:min(1180px,calc(100% - 36px));margin:auto}
 header{position:sticky;top:0;z-index:10;background:#090711eF;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 .nav{height:70px;display:flex;justify-content:space-between;align-items:center}
-.brand{display:inline-flex;align-items:center;gap:8px;font-size:1.12rem;font-weight:900;letter-spacing:-.045em}.brand span:last-child{color:var(--purple)}.brand-mark{width:30px;height:30px;display:inline-grid;place-items:center;border-radius:10px;background:linear-gradient(145deg,#b99aff,#6d28d9);color:#fff!important;font-size:1rem;font-weight:900;font-style:italic;box-shadow:0 0 22px #8b5cf655;letter-spacing:-.08em}.brand-mark-small{width:22px;height:22px;border-radius:7px;font-size:.78rem;vertical-align:middle;margin-right:5px}
+.brand{display:inline-flex;align-items:center;gap:8px;font-size:1.12rem;font-weight:900;letter-spacing:-.045em}.brand span:last-child{color:var(--purple)}.brand-mark{width:30px;height:30px;display:inline-grid;place-items:center;border-radius:10px;background:linear-gradient(145deg,#b99aff,#6d28d9);color:#fff!important;font-size:1rem;font-weight:900;font-style:italic;box-shadow:0 0 22px #8b5cf655;letter-spacing:-.08em}.brand-mark-small{width:22px;height:22px;border-radius:7px;font-size:.78rem;vertical-align:middle;margin-right:5px}.brand-mark-img{width:36px;height:36px;object-fit:contain;filter:drop-shadow(0 0 9px #8b5cf677);vertical-align:middle}.brand-mark-small-img{width:24px;height:24px;margin-right:5px}
 .brand span{color:var(--purple)}
 .nav a{color:var(--muted);margin-left:20px;font-size:.9rem}
 .hero{text-align:center;padding:90px 0 55px}
@@ -130,7 +130,7 @@ footer{border-color:#2c213d;background:#080610}
 <body>
 <header>
 <div class="wrap nav">
-<a class="brand" href="#" aria-label="SIVELO SCOUT home"><span class="brand-mark" aria-hidden="true">S</span> SIVELO <span>SCOUT</span></a>
+<a class="brand" href="#" aria-label="SIVELO SCOUT home"><img class="brand-mark-img" src="assets/sivelo-mark.svg" alt=""> SIVELO <span>SCOUT</span></a>
 <nav><a href="#tools">Explore</a><a href="#guides">Guides</a><a href="community.html">Community</a><a href="#about">About</a></nav>
 </div>
 </header>
@@ -211,7 +211,7 @@ footer{border-color:#2c213d;background:#080610}
 <footer>
 <div class="wrap">
 <div class="foot">
-<strong><span class="brand-mark brand-mark-small" aria-hidden="true">S</span> SIVELO SCOUT</strong>
+<strong><img class="brand-mark-img brand-mark-small-img" src="assets/sivelo-mark.svg" alt=""> SIVELO SCOUT</strong>
 <div><a href="mailto:toolscoutdirectory@outlook.com">Contact</a><a href="community.html">Community</a><a href="#about">About</a><a href="privacy.html">Privacy Policy</a><a href="affiliate-disclosure.html">Affiliate Disclosure</a></div>
 </div>
 <p>SIVELO SCOUT is an independent directory. We do not currently have active affiliate links. If that changes, affiliate links will be clearly identified and our disclosure will be updated.</p>
