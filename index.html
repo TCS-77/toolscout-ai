@@ -92,7 +92,7 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-s
 <input id="search" type="search" placeholder="Search tools, categories or ideas..." aria-label="Search AI tools">
 <button id="searchBtn">Search →</button>
 </div>
-<p style="font-size:.8rem;margin-top:14px">Explore <span id="toolSummaryCount">126</span> AI tools across <span id="toolSummaryCategories">32</span> categories, or join the SIVELO SCOUT community and share a discovery.</p><p style="margin-top:18px"><a class="primary" href="community.html">Join the community →</a></p>
+<p style="font-size:.8rem;margin-top:14px">Explore <span id="toolSummaryCount">200</span> AI tools across <span id="toolSummaryCategories">43</span> categories, or join the SIVELO SCOUT community and share a discovery.</p><p style="margin-top:18px"><a class="primary" href="community.html">Join the community →</a></p>
 </section>
 
 <section class="wrap section">
@@ -340,7 +340,98 @@ const tools = [
 
 ["Meshy","3D & Game Development","Me","Generate 3D models and textures from text or images.","Free access and paid plans","https://www.meshy.ai/"],
 ["Tripo AI","3D & Game Development","Tr","Create 3D assets from text and image prompts.","Free access and paid plans","https://www.tripo3d.ai/"],
-["Kaedim","3D & Game Development","Ka","Turn 2D concepts into production-ready 3D assets.","Paid plans","https://www.kaedim3d.com/"]
+["Kaedim","3D & Game Development","Ka","Turn 2D concepts into production-ready 3D assets.","Paid plans","https://www.kaedim3d.com/"],
+
+["DeepSeek","AI Assistants","DS","AI assistant for reasoning, coding, research and everyday questions.","Free access and paid API options","https://www.deepseek.com/"],
+["Qwen Chat","AI Assistants","Qw","AI assistant from Alibaba for conversation, coding and multimodal tasks.","Free access; features vary","https://chat.qwen.ai/"],
+["Poe","AI Assistants","Po","Explore and chat with a range of AI models and custom bots.","Free access and paid plans","https://poe.com/"],
+["You.com","AI Assistants","Yo","AI search and assistant platform for research and productivity.","Free access and paid plans","https://you.com/"],
+
+["DALL·E","Image Generation","Da","Generate images from text prompts with OpenAI image tools.","Access through ChatGPT plans","https://chatgpt.com/"],
+["NightCafe","Image Generation","Ni","Create AI artwork using different image generation models.","Free credits and paid options","https://nightcafe.studio/"],
+["Artbreeder","Image Generation","Ar","Create and remix images using generative creative tools.","Free access and paid plans","https://www.artbreeder.com/"],
+["Tensor.Art","Image Generation","Te","Explore AI image generation models and community workflows.","Free access and paid options","https://tensor.art/"],
+["OpenArt","Image Generation","OA","AI image creation, editing and creative workflows.","Free access and paid plans","https://openart.ai/"],
+
+["CapCut","Video","Ca","Video editor with AI-powered editing, captions and creative features.","Free access and paid options","https://www.capcut.com/"],
+["OpusClip","Video","Op","Turn long videos into short clips with AI-assisted editing.","Free access and paid plans","https://www.opus.pro/"],
+["InVideo AI","Video","In","Create videos from prompts, scripts and media assets.","Free access and paid plans","https://invideo.io/"],
+["D-ID","Video","D","Create talking-avatar videos from images and text.","Free trial and paid plans","https://www.d-id.com/"],
+["Hailuo AI","Video","Ha","Generate videos from text and images using generative AI.","Free credits and paid options","https://hailuoai.video/"],
+
+["Auphonic","Audio & Music","Au","Automatically level, clean and process spoken audio and podcasts.","Free monthly hours and paid plans","https://auphonic.com/"],
+["Adobe Podcast","Audio & Music","AP","Enhance spoken audio and simplify podcast recording and editing.","Free tools and paid options","https://podcast.adobe.com/"],
+["Kits AI","Audio & Music","Ki","AI voice and music production tools for creators.","Free access and paid plans","https://www.kits.ai/"],
+["LANDR","Audio & Music","La","Music production platform with AI mastering and creator tools.","Paid plans and services","https://www.landr.com/"],
+
+["Vapi","Voice Agents","Va","Developer platform for building AI voice agents and phone experiences.","Usage-based pricing","https://vapi.ai/"],
+["Retell AI","Voice Agents","Re","Build AI phone agents for customer conversations and workflows.","Usage-based pricing","https://www.retellai.com/"],
+["Bland AI","Voice Agents","Bl","Create AI phone agents for business calls and customer workflows.","Usage-based pricing","https://www.bland.ai/"],
+["ElevenLabs Agents","Voice Agents","EA","Build conversational voice agents with speech and tool integrations.","Free access and paid plans","https://elevenlabs.io/agents"],
+
+["Dify","AI Agents","Di","Open-source platform for building AI applications and agent workflows.","Free self-hosted and cloud plans","https://dify.ai/"],
+["Botpress","AI Agents","Bo","Build and deploy AI agents for customer conversations and tasks.","Free access and paid plans","https://botpress.com/"],
+["AutoGPT","AI Agents","Au","Open-source platform for creating autonomous AI workflows.","Open-source and paid options","https://agpt.co/"],
+["Langflow","AI Agents","Lf","Visual builder for AI agents and language-model workflows.","Free and open source; cloud options","https://www.langflow.org/"],
+["Voiceflow","AI Agents","Vo","Design and deploy conversational AI agents for chat and voice.","Free access and paid plans","https://www.voiceflow.com/"],
+
+["Cline","Coding","Cl","Open-source coding agent that works inside supported code editors.","Free and open source; model usage may cost","https://cline.bot/"],
+["Aider","Coding","Ai","Terminal-based AI pair programming tool for editing code repositories.","Free and open source; model usage may cost","https://aider.chat/"],
+["Sourcegraph Cody","Coding","SC","AI coding assistant for understanding and working across codebases.","Free access and paid plans","https://sourcegraph.com/cody"],
+["Claude Code","Coding","CC","Agentic coding tool for working with code from the terminal.","Paid plan or API usage","https://www.anthropic.com/claude-code"],
+["Codex","Coding","Co","AI coding agent for software development tasks and code changes.","Plan and usage availability varies","https://openai.com/codex/"],
+
+["Figma","Image & Design","Fi","Collaborative interface design platform with AI-powered design features.","Free tier and paid plans","https://www.figma.com/"],
+["Kittl","Image & Design","Ki","Online design platform for graphics, typography and creative assets.","Free access and paid plans","https://www.kittl.com/"],
+["Photoroom","Image & Design","Ph","AI photo editing and background tools for product images.","Free access and paid plans","https://www.photoroom.com/"],
+["Remove.bg","Image & Design","Rb","Automatically remove image backgrounds.","Free previews and paid credits","https://www.remove.bg/"],
+["Clipdrop","Image & Design","Cd","AI-powered image cleanup, relighting and editing tools.","Free access and paid options","https://clipdrop.co/"],
+
+["MagicSchool AI","Education","MS","AI tools designed to support teachers and classroom workflows.","Free access and paid plans","https://www.magicschool.ai/"],
+["SchoolAI","Education","Sc","AI learning spaces and tools for educators and students.","Free access and paid plans","https://schoolai.com/"],
+["Photomath","Education","Ph","Step-by-step math learning and problem-solving app.","Free access and paid subscription","https://photomath.com/"],
+["Coursera","Education","Co","Online learning platform with AI-supported learning and career tools.","Free courses and paid plans","https://www.coursera.org/"],
+
+["Hex","Data & Analytics","He","Collaborative analytics workspace for SQL, Python and AI-powered data work.","Free access and paid plans","https://hex.tech/"],
+["DataLab","Data & Analytics","DL","Cloud data science notebooks with AI-assisted analysis.","Free access and paid plans","https://www.datacamp.com/datalab"],
+["Obviously AI","Data & Analytics","Ob","No-code predictive analytics for business data.","Paid plans","https://www.obviously.ai/"],
+["Rows","Data & Analytics","Ro","Spreadsheet platform with integrations and AI data workflows.","Free access and paid plans","https://rows.com/"],
+
+["Hootsuite","Social Media","Ho","Manage, schedule and analyze social media content across channels.","Paid plans and trial options","https://www.hootsuite.com/"],
+["Later","Social Media","La","Plan and schedule social media posts with creator-focused tools.","Free access and paid plans","https://later.com/"],
+["Metricool","Social Media","Me","Plan, publish and analyze social media and advertising performance.","Free access and paid plans","https://metricool.com/"],
+["SocialBee","Social Media","SB","AI-assisted social media content creation and scheduling.","Paid plans and trial options","https://socialbee.com/"],
+
+["GPTZero","AI Detection","GZ","AI writing detection and authorship analysis tools.","Free access and paid plans","https://gptzero.me/"],
+["Originality.ai","AI Detection","Or","AI content detection and plagiarism checking for publishers.","Paid plans","https://originality.ai/"],
+["Winston AI","AI Detection","Wi","AI-generated text and image detection for educators and publishers.","Free trial and paid plans","https://gowinston.ai/"],
+
+["Interior AI","Interior Design","In","Generate interior design concepts and room visualizations with AI.","Paid plans","https://interiorai.com/"],
+["RoomGPT","Interior Design","RG","Generate redesigned room concepts from uploaded room photos.","Free access and paid options","https://www.roomgpt.io/"],
+["ReimagineHome","Interior Design","RH","AI visualization for interior design, landscaping and property staging.","Free trial and paid plans","https://www.reimaginehome.ai/"],
+
+["Kickresume","Job Search","Kr","Create resumes and cover letters with AI assistance.","Free access and paid plans","https://www.kickresume.com/"],
+["Rezi","Job Search","Re","AI resume builder focused on job applications and ATS formatting.","Free access and paid plans","https://www.rezi.ai/"],
+["Huntr","Job Search","Hu","Organize job searches and create tailored application materials.","Free access and paid plans","https://huntr.co/"],
+
+["Abridge","Healthcare","Ab","AI clinical documentation assistant for healthcare conversations.","Healthcare organization plans","https://www.abridge.com/"],
+["OpenEvidence","Healthcare","OE","Medical information platform designed for clinicians.","Free access for eligible clinicians","https://www.openevidence.com/"],
+["Nabla","Healthcare","Na","AI assistant for clinical documentation and healthcare workflows.","Healthcare plans","https://www.nabla.com/"],
+
+["Shopify Magic","E-commerce","SM","AI features for product content, store operations and commerce workflows.","Included features vary by Shopify plan","https://www.shopify.com/magic"],
+["Octane AI","E-commerce","Oc","Interactive quizzes and personalization tools for ecommerce stores.","Paid plans","https://www.octaneai.com/"],
+["Gorgias","E-commerce","Go","Customer support platform with AI automation for ecommerce brands.","Paid plans","https://www.gorgias.com/"],
+
+["Qdrant","AI Infrastructure","Qd","Open-source vector search engine and vector database.","Free self-hosted and cloud plans","https://qdrant.tech/"],
+["Chroma","AI Infrastructure","Ch","Open-source database for AI applications and retrieval workflows.","Free and open source; cloud options","https://www.trychroma.com/"],
+["Modal","AI Infrastructure","Mo","Cloud platform for running compute-heavy AI and data workloads.","Usage-based pricing","https://modal.com/"],
+["Replicate","AI Models & APIs","Rp","Run and integrate machine-learning models through APIs.","Usage-based pricing","https://replicate.com/"],
+["Together AI","AI Models & APIs","TA","Platform for accessing and running open AI models through APIs.","Usage-based pricing","https://www.together.ai/"],
+
+["Asana","Productivity","As","Project management platform with AI features for coordinating work.","Free tier and paid plans","https://asana.com/"],
+["ClickUp","Productivity","Cl","Work management platform with AI tools for tasks and documents.","Free tier and paid AI options","https://clickup.com/"],
+["Airtable","Productivity","Ai","Flexible database and workflow platform with AI features.","Free tier and paid plans","https://www.airtable.com/"],
+["Taskade","Productivity","Ta","AI-powered workspace for tasks, projects and agents.","Free access and paid plans","https://www.taskade.com/"]
 ];
 
 const categories = ["All",...new Set(tools.map(t=>t[1]))];
