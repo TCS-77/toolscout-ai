@@ -33,6 +33,11 @@ select option{background:#100d19;color:#e8e0f2}
 .searchbar,.panel,.resultbox,.profilebox,.profileprice,.mini-tool,.recent-chip,.library-tab,.comparebar select{background-color:#110d1b}
 .toolcard,.collection{background:linear-gradient(145deg,#151020,#0e0b17)}
 .feature-week{background:linear-gradient(112deg,#151020 0%,#100c19 62%,#171023 100%)}
+
+/* Dark themed save/like controls */
+.like-btn{appearance:none;-webkit-appearance:none;display:inline-grid;place-items:center;min-width:40px;height:40px;padding:0 11px;border:1px solid #40304f;border-radius:11px;background:#171122!important;color:#c9b8e8!important;font-size:1.25rem;line-height:1;cursor:pointer;transition:background .18s,border-color .18s,color .18s,transform .18s}
+.like-btn:hover{background:#241936!important;border-color:#7655a6;color:#e9d5ff!important;transform:translateY(-1px)}
+.like-btn.liked{background:#2a183b!important;border-color:#8b5cf6;color:#d8b4fe!important}
 </style></head><body>
 <header><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/sivelo-mark.svg" alt="">SIVELO <span>SCOUT</span></a><nav><a href="#finder">AI Finder</a><a href="#discover">Discover</a><a href="#" id="navLibrary" class="library-trigger">My Library</a><a href="#" id="navCompare">Compare <span id="compareCount" class="tag" style="margin-left:4px">0</span></a><a href="#collections">Collections</a><a href="community.html">Community</a></nav></div></header>
 <main>
