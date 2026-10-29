@@ -291,7 +291,7 @@ $("findBtn").addEventListener("click",runFinder);$("goal").addEventListener("key
 function searchNow(){currentQuery=$("globalSearch").value.trim();activeCategory="All";buildFilters();renderTools();$("discover").scrollIntoView({behavior:"smooth"})}
 $("globalSearchBtn").addEventListener("click",searchNow);$("globalSearch").addEventListener("keydown",e=>{if(e.key==="Enter")searchNow()});
 $("compareBtn").addEventListener("click",doCompare);$("navCompare").addEventListener("click",e=>{e.preventDefault();syncCompare();$("compareModal").classList.add("show")});$("closeCompare").addEventListener("click",()=>$("compareModal").classList.remove("show"));$("compareModal").addEventListener("click",e=>{if(e.target===$("compareModal"))$("compareModal").classList.remove("show")});
-["compareA","compareB","compareC"].forEach((id,n)=>$(id).addEventListener("change",()=>{const values=["compareA","compareB","compareC"].map(x=>$(x).value).filter(x=>x!=="").map(Number);compareSelection=values}));
+["compareA","compareB"].forEach(id=>$(id).addEventListener("change",()=>{compareSelection=["compareA","compareB"].map(x=>$(x).value).filter(x=>x!=="").map(Number)}));
 document.addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();$("globalSearch").focus()}if(e.key==="Escape"){$("profileModal").classList.remove("show");$("compareModal").classList.remove("show")}});
 buildFilters();renderTools();syncCompare();
 </script></body></html>
