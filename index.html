@@ -169,6 +169,26 @@ main>.layout,main>.section,main>section:not(:first-child){animation:sivelo-enter
 .card:nth-child(5),.toolcard:nth-child(5),.collection:nth-child(5){animation-delay:.24s}
 .card:nth-child(n+6),.toolcard:nth-child(n+6){animation-delay:.28s}
 @media(prefers-reduced-motion:reduce){body>header,main>.hero,main>section:first-child,main>.layout,main>.section,main>section:not(:first-child),.card,.toolcard,.collection,.panel{animation:none!important}}
+
+/* SIVELO SCOUT — monochrome graphite theme */
+:root{--bg:#090909;--panel:#141414;--panel2:#1d1d1d;--purple:#d4d4d4;--text:#f5f5f5;--muted:#a3a3a3;--line:#303030;--glow:#ffffff12}
+body{background:radial-gradient(ellipse at 50% -18%,#ffffff0b,transparent 46%),var(--bg)!important;color:var(--text)}
+header{background:#090909ed!important;border-color:#303030!important}
+.brand-mark-img,.brand img{filter:grayscale(1) brightness(1.65)}
+a,.nav-icon,.home-nav-icon,.community-nav-icon{color:#e5e5e5}
+.nav-icon,.home-nav-icon,.community-nav-icon{stroke:currentColor}
+.gradient,.hero .gradient{background:linear-gradient(100deg,#fff 0%,#bdbdbd 48%,#777 100%)!important;background-clip:text!important;-webkit-background-clip:text!important;color:transparent!important}
+.badge,.pill,.tag,.chip,.eyebrow{border-color:#393939!important;background:#1b1b1b!important;color:#d4d4d4!important}
+.card,.toolcard,.collection,.panel,.feature-week,.modal,.finder-box,.compare-box{background:linear-gradient(145deg,#1a1a1a,#101010)!important;border-color:#303030!important}
+.card:hover,.toolcard:hover,.collection:hover{border-color:#777!important;box-shadow:0 14px 45px #0008,0 0 20px #ffffff0b!important}
+.logo{background:#242424!important;border-color:#484848!important;color:#f1f1f1!important}
+.btn,.button,.details,button.primary,.cta{background:#e5e5e5!important;color:#111!important;border-color:#e5e5e5!important}
+.btn.secondary,.like-btn,button.secondary{background:#222!important;color:#eee!important;border-color:#444!important}
+.btn:hover,.button:hover,.details:hover{background:#fff!important;color:#000!important}
+input,select,textarea{background:#171717!important;color:#f5f5f5!important;border-color:#3b3b3b!important}
+a:hover{color:#fff}
+::selection{background:#d4d4d4;color:#111}
+@media(prefers-reduced-motion:no-preference){.hero:before{background:radial-gradient(ellipse,#ffffff0b,transparent 68%)!important}}
 </style>
 </head>
 <body>
