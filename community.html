@@ -45,6 +45,14 @@ label{display:block;font-size:.82rem;font-weight:700;margin:13px 0 6px}input,sel
 <button class="btn" id="submitTool" type="submit" style="width:100%;margin-top:17px">Send for review →</button>
 <p class="small">Submissions are checked by ToolScout before publication. Don't submit private information or tools you don't have permission to share.</p>
 </form></div>
+<section id="adminPanel" class="hidden" style="margin-top:22px;padding-top:20px;border-top:1px solid var(--line)">
+  <div class="eyebrow">Private admin area</div>
+  <h2>Review submissions</h2>
+  <p class="muted">Approve useful tools to publish them, or reject submissions that don't meet the directory guidelines.</p>
+  <div id="pendingCount" class="small" style="margin-top:12px">Loading pending submissions…</div>
+  <div id="pendingTools" class="tools"></div>
+  <div id="adminStatus" class="status" role="status" aria-live="polite"></div>
+</section>
 </div>
 <div id="authStatus" class="status" role="status" aria-live="polite"></div>
 </aside>
@@ -78,6 +86,9 @@ function setAuthState(user) {
   document.getElementById("signedOut").classList.toggle("hidden",!!user);
   document.getElementById("signedIn").classList.toggle("hidden",!user);
   if(user) document.getElementById("userEmail").textContent=user.email || "Signed-in user";
+  const adminPanel=document.getElementById("adminPanel");
+  if(!user) adminPanel.classList.add("hidden");
+  else if(supabaseClient) loadAdminPanel(user);
 }
 function safeLink(url) {
   try { const parsed=new URL(url); return parsed.protocol==="https:" || parsed.protocol==="http:" ? parsed.href : null; } catch { return null; }
@@ -98,6 +109,82 @@ function renderTools(rows) {
     const url=safeLink(tool.website_url);
     if(url) { const link=document.createElement("a"); link.href=url; link.target="_blank"; link.rel="noopener noreferrer"; link.textContent="Visit official website ↗"; card.appendChild(link); }
     list.appendChild(card);
+  });
+}
+async function loadAdminPanel(user) {
+  const panel=document.getElementById("adminPanel");
+  const pendingTools=document.getElementById("pendingTools");
+  const pendingCount=document.getElementById("pendingCount");
+  const adminStatus=document.getElementById("adminStatus");
+  panel.classList.add("hidden");
+  const {data:profile,error:profileError}=await supabaseClient
+    .from("profiles").select("is_admin").eq("id",user.id).maybeSingle();
+  if(profileError) { console.warn("Could not check admin access:",profileError); return; }
+  if(!profile || profile.is_admin!==true) return;
+  panel.classList.remove("hidden");
+  await loadPendingSubmissions();
+}
+async function loadPendingSubmissions() {
+  const pendingTools=document.getElementById("pendingTools");
+  const pendingCount=document.getElementById("pendingCount");
+  pendingTools.replaceChildren();
+  pendingCount.textContent="Loading pending submissions…";
+  const {data,error}=await supabaseClient
+    .from("community_tools")
+    .select("id,name,website_url,description,category,pricing,creator_name,created_at")
+    .eq("status","pending")
+    .order("created_at",{ascending:true})
+    .limit(100);
+  if(error) {
+    pendingCount.textContent="Could not load submissions.";
+    showStatus(document.getElementById("adminStatus"),"Admin error: "+error.message,true);
+    console.error(error);
+    return;
+  }
+  const rows=data || [];
+  pendingCount.textContent=rows.length+" pending "+(rows.length===1?"submission":"submissions");
+  if(!rows.length) {
+    const empty=document.createElement("div");
+    empty.className="empty";
+    empty.textContent="You're all caught up. No submissions need review.";
+    pendingTools.appendChild(empty);
+    return;
+  }
+  rows.forEach(tool=>{
+    const card=document.createElement("article"); card.className="tool";
+    const top=document.createElement("div"); top.className="tooltop";
+    const title=document.createElement("h3"); title.textContent=tool.name;
+    const tag=document.createElement("span"); tag.className="tag"; tag.textContent=tool.category;
+    top.append(title,tag);
+    const description=document.createElement("p"); description.textContent=tool.description;
+    const meta=document.createElement("div"); meta.className="small";
+    meta.textContent="Pricing: "+tool.pricing+(tool.creator_name?" · Shared by "+tool.creator_name:"");
+    card.append(top,description,meta);
+    const url=safeLink(tool.website_url);
+    if(url) {
+      const link=document.createElement("a"); link.href=url; link.target="_blank";
+      link.rel="noopener noreferrer"; link.textContent="Visit website ↗"; card.appendChild(link);
+    }
+    const actions=document.createElement("div"); actions.className="actions";
+    const approve=document.createElement("button"); approve.className="btn"; approve.textContent="Approve";
+    const reject=document.createElement("button"); reject.className="btn outline"; reject.textContent="Reject";
+    async function setReviewStatus(status,button) {
+      approve.disabled=true; reject.disabled=true; button.textContent=status==="approved"?"Approving…":"Rejecting…";
+      const {error:updateError}=await supabaseClient.from("community_tools")
+        .update({status}).eq("id",tool.id);
+      if(updateError) {
+        approve.disabled=false; reject.disabled=false;
+        approve.textContent="Approve"; reject.textContent="Reject";
+        return showStatus(document.getElementById("adminStatus"),"Couldn't update this submission: "+updateError.message,true);
+      }
+      showStatus(document.getElementById("adminStatus"),status==="approved"?"Tool approved and published!":"Submission rejected.");
+      await loadPendingSubmissions();
+      await loadTools();
+    }
+    approve.addEventListener("click",()=>setReviewStatus("approved",approve));
+    reject.addEventListener("click",()=>setReviewStatus("rejected",reject));
+    actions.append(approve,reject); card.appendChild(actions);
+    pendingTools.appendChild(card);
   });
 }
 async function loadTools() {
