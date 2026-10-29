@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090711">
+<meta name="description" content="Discover AI tools shared by the ToolScout AI community, or submit a tool for review.">
+<title>ToolScout AI Community — Discover & Share AI Tools</title>
+<style>
+:root{--bg:#090711;--panel:#151122;--panel2:#1d1730;--purple:#a78bfa;--text:#f8f7ff;--muted:#a39bb8;--line:#302544}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#38205f66,transparent 45%),var(--bg);color:var(--text);font:15px/1.6 system-ui,sans-serif}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.wrap{width:min(1100px,calc(100% - 36px));margin:auto}
+header{position:sticky;top:0;z-index:5;background:#090711ef;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{height:68px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:1.15rem;font-weight:900;letter-spacing:-.05em}.brand span{color:var(--purple)}.navlinks{display:flex;gap:20px;color:var(--muted);font-size:.9rem}
+.hero{text-align:center;padding:65px 0 35px}.eyebrow{color:var(--purple);font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.pill{display:inline-block;padding:6px 13px;border:1px solid #61469a;border-radius:30px;background:#25183d;color:#d7c5ff;font-size:.75rem;font-weight:800}h1{font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.05;letter-spacing:-.07em;margin:18px 0}.gradient{background:linear-gradient(100deg,#c4b5fd,#9333ea,#e9d5ff);background-clip:text;color:transparent}.hero p{max-width:650px;margin:0 auto;color:var(--muted)}
+.layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);gap:20px;padding:25px 0 70px;align-items:start}.panel{background:linear-gradient(145deg,#1c1630,#110e1b);border:1px solid var(--line);border-radius:17px;padding:23px}.panel h2{margin:0 0 5px;font-size:1.45rem;letter-spacing:-.04em}.muted{color:var(--muted);font-size:.88rem}.tools{display:grid;gap:12px;margin-top:20px}.tool{padding:16px;border:1px solid var(--line);background:#151122;border-radius:13px}.tooltop{display:flex;justify-content:space-between;gap:12px;align-items:start}.tool h3{margin:0;font-size:1.05rem}.tag{display:inline-block;color:#d5c3ff;background:#34224f;border-radius:30px;padding:4px 9px;font-size:.7rem}.tool p{margin:9px 0;color:var(--muted);font-size:.86rem;overflow-wrap:anywhere}.tool a{color:#c4b5fd;font-weight:700;font-size:.85rem}.empty{padding:28px;text-align:center;border:1px dashed var(--line);border-radius:13px;color:var(--muted);margin-top:18px}
+label{display:block;font-size:.82rem;font-weight:700;margin:13px 0 6px}input,select,textarea{width:100%;padding:11px 12px;color:white;background:#100d19;border:1px solid #44305e;border-radius:9px;outline:none}input:focus,select:focus,textarea:focus{border-color:var(--purple)}textarea{min-height:105px;resize:vertical}select option{background:#151122}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.btn{border:0;border-radius:9px;padding:11px 16px;background:linear-gradient(135deg,#a78bfa,#7c3aed);color:white;font-weight:800;cursor:pointer}.btn:disabled{opacity:.55;cursor:not-allowed}.outline{background:transparent;border:1px solid var(--line);color:white}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.status{margin-top:13px;padding:10px 12px;border-radius:9px;background:#211833;color:#dfd1ff;font-size:.84rem;display:none}.status.show{display:block}.status.error{background:#351a28;color:#ffc4d2}.hidden{display:none!important}.authnote{padding:12px;background:#211833;border:1px solid #44305e;border-radius:10px;margin-top:14px;color:#cfc2e4;font-size:.82rem}.sectionhead{display:flex;justify-content:space-between;gap:12px;align-items:end;flex-wrap:wrap}.small{font-size:.76rem;color:var(--muted)}footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:.82rem}
+@media(max-width:800px){.layout{grid-template-columns:1fr}.hero{padding-top:48px}}@media(max-width:520px){.navlinks{gap:10px;font-size:.8rem}.row{grid-template-columns:1fr}.panel{padding:18px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="index.html">✦ TOOLSCOUT <span>AI</span></a><nav class="navlinks"><a href="index.html#tools">Explore</a><a href="index.html#guides">Guides</a><a href="community.html">Community</a></nav></div></header>
+<main class="wrap">
+<section class="hero"><span class="pill">✦ BUILT BY THE COMMUNITY</span><h1>Discover. Share.<br><span class="gradient">Build together.</span></h1><p>Find useful AI tools shared by the community, or submit a tool you've built or discovered. Every submission is reviewed before it goes public.</p></section>
+<div class="layout">
+<section class="panel">
+<div class="sectionhead"><div><div class="eyebrow">Community directory</div><h2>Community tools</h2><div class="muted">Approved submissions from makers and AI enthusiasts.</div></div><span class="small" id="toolCount">Loading…</span></div>
+<div id="communityTools" class="tools"><div class="empty">Connecting to the community directory…</div></div>
+<div id="listStatus" class="status" role="status" aria-live="polite"></div>
+</section>
+<aside class="panel">
+<div class="eyebrow">Add to the collection</div><h2>Submit an AI tool</h2><p class="muted">Found something useful? Share it with everyone. You can submit tools you've made or tools you've discovered.</p>
+<div id="setupNotice" class="authnote">The community database has not been connected yet. The submission page is ready; the site owner needs to add the Supabase project settings to activate accounts and submissions.</div>
+<div id="authArea" class="hidden">
+<div id="signedOut">
+<div class="row"><div><label for="email">Email</label><input id="email" type="email" autocomplete="email" placeholder="you@example.com"></div><div><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" placeholder="At least 6 characters"></div></div>
+<div class="actions"><button class="btn" id="signIn">Sign in</button><button class="btn outline" id="signUp">Create account</button></div>
+<p class="small">New accounts may need to confirm their email before signing in.</p>
+</div>
+<div id="signedIn" class="hidden"><div class="authnote">Signed in as <strong id="userEmail"></strong></div><button class="btn outline" id="signOut" style="margin-top:12px">Sign out</button>
+<form id="submitForm">
+<label for="toolName">Tool name</label><input id="toolName" maxlength="80" required placeholder="e.g. MyAI Assistant">
+<label for="toolUrl">Official website URL</label><input id="toolUrl" type="url" maxlength="500" required placeholder="https://example.com">
+<label for="toolDescription">What does it do?</label><textarea id="toolDescription" maxlength="700" required placeholder="Describe what the tool does and who might find it useful."></textarea>
+<div class="row"><div><label for="toolCategory">Category</label><select id="toolCategory" required><option value="">Choose one</option></select></div><div><label for="toolPricing">Pricing</label><select id="toolPricing" required><option value="">Choose one</option><option>Free</option><option>Free plan available</option><option>Paid</option><option>Unknown</option></select></div></div>
+<label for="creatorName">Your display name (optional)</label><input id="creatorName" maxlength="50" placeholder="How should we credit you?">
+<button class="btn" id="submitTool" type="submit" style="width:100%;margin-top:17px">Send for review →</button>
+<p class="small">Submissions are checked by ToolScout before publication. Don't submit private information or tools you don't have permission to share.</p>
+</form></div>
+</div>
+<div id="authStatus" class="status" role="status" aria-live="polite"></div>
+</aside>
+</div>
+</main>
+<footer><div class="wrap">© <span id="year"></span> ToolScout AI · <a href="privacy.html">Privacy</a> · <a href="affiliate-disclosure.html">Affiliate disclosure</a> · <a href="mailto:toolscoutdirectory@outlook.com">Contact</a></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/*
+  SETUP: Create a Supabase project, run supabase-setup.sql in its SQL Editor,
+  then replace both placeholders below with the project's Project URL and anon/publishable key.
+  Never put a service_role key in this public website.
+*/
+const SUPABASE_URL = "YOUR_SUPABASE_PROJECT_URL";
+const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
+const categories = ["AI Assistants","Writing","Image Generation","Image & Design","Video Generation","Audio & Music","Voice & Speech","Coding","AI Agents","Automation","Productivity","Research","Marketing","Business","Customer Support","Education","Data & Analytics","Translation","Presentations","Finance","Cybersecurity","Other"];
+const categorySelect = document.getElementById("toolCategory");
+categories.forEach(category => { const option=document.createElement("option"); option.value=category; option.textContent=category; categorySelect.appendChild(option); });
+document.getElementById("year").textContent = new Date().getFullYear();
+const configured = SUPABASE_URL.startsWith("https://") && !SUPABASE_URL.includes("YOUR_") && SUPABASE_ANON_KEY.length > 20 && !SUPABASE_ANON_KEY.includes("YOUR_");
+const setupNotice = document.getElementById("setupNotice");
+const authArea = document.getElementById("authArea");
+const authStatus = document.getElementById("authStatus");
+const list = document.getElementById("communityTools");
+const toolCount = document.getElementById("toolCount");
+let supabaseClient = null;
+let currentUser = null;
+function showStatus(target, message, isError=false) { target.textContent=message; target.classList.add("show"); target.classList.toggle("error",isError); }
+function setAuthState(user) {
+  currentUser=user;
+  document.getElementById("signedOut").classList.toggle("hidden",!!user);
+  document.getElementById("signedIn").classList.toggle("hidden",!user);
+  if(user) document.getElementById("userEmail").textContent=user.email || "Signed-in user";
+}
+function safeLink(url) {
+  try { const parsed=new URL(url); return parsed.protocol==="https:" || parsed.protocol==="http:" ? parsed.href : null; } catch { return null; }
+}
+function renderTools(rows) {
+  list.replaceChildren();
+  toolCount.textContent=rows.length + (rows.length===1 ? " tool" : " tools");
+  if(!rows.length) { const empty=document.createElement("div"); empty.className="empty"; empty.textContent="No community submissions yet. Be the first to share a useful AI tool."; list.appendChild(empty); return; }
+  rows.forEach(tool=>{
+    const card=document.createElement("article"); card.className="tool";
+    const top=document.createElement("div"); top.className="tooltop";
+    const title=document.createElement("h3"); title.textContent=tool.name;
+    const tag=document.createElement("span"); tag.className="tag"; tag.textContent=tool.category;
+    top.append(title,tag);
+    const description=document.createElement("p"); description.textContent=tool.description;
+    const meta=document.createElement("div"); meta.className="small"; meta.textContent="Pricing: " + tool.pricing + (tool.creator_name ? " · Shared by " + tool.creator_name : "");
+    card.append(top,description,meta);
+    const url=safeLink(tool.website_url);
+    if(url) { const link=document.createElement("a"); link.href=url; link.target="_blank"; link.rel="noopener noreferrer"; link.textContent="Visit official website ↗"; card.appendChild(link); }
+    list.appendChild(card);
+  });
+}
+async function loadTools() {
+  const {data,error}=await supabaseClient.from("community_tools").select("id,name,website_url,description,category,pricing,creator_name,created_at").eq("status","approved").order("created_at",{ascending:false}).limit(100);
+  if(error) { list.replaceChildren(); const msg=document.createElement("div"); msg.className="empty"; msg.textContent="The community directory could not load. Please try again later."; list.appendChild(msg); toolCount.textContent="Unavailable"; console.error(error); return; }
+  renderTools(data || []);
+}
+async function refreshSession() {
+  const {data}=await supabaseClient.auth.getSession();
+  setAuthState(data.session?.user || null);
+}
+if(configured && window.supabase) {
+  setupNotice.classList.add("hidden");
+  authArea.classList.remove("hidden");
+  supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
+  supabaseClient.auth.onAuthStateChange((_event,session)=>setAuthState(session?.user || null));
+  refreshSession();
+  loadTools();
+  document.getElementById("signUp").addEventListener("click",async()=>{
+    const email=document.getElementById("email").value.trim(), password=document.getElementById("password").value;
+    if(!email || password.length<6) return showStatus(authStatus,"Enter a valid email and a password with at least 6 characters.",true);
+    const {data,error}=await supabaseClient.auth.signUp({email,password});
+    if(error) return showStatus(authStatus,error.message,true);
+    showStatus(authStatus,data.session ? "Account created. You're signed in." : "Account created. Check your email for a confirmation link.");
+    if(data.session) setAuthState(data.session.user);
+  });
+  document.getElementById("signIn").addEventListener("click",async()=>{
+    const email=document.getElementById("email").value.trim(), password=document.getElementById("password").value;
+    const {data,error}=await supabaseClient.auth.signInWithPassword({email,password});
+    if(error) return showStatus(authStatus,error.message,true);
+    setAuthState(data.user); showStatus(authStatus,"You're signed in.");
+  });
+  document.getElementById("signOut").addEventListener("click",async()=>{
+    const {error}=await supabaseClient.auth.signOut();
+    if(error) return showStatus(authStatus,error.message,true);
+    setAuthState(null); showStatus(authStatus,"You've been signed out.");
+  });
+  document.getElementById("submitForm").addEventListener("submit",async event=>{
+    event.preventDefault();
+    if(!currentUser) return showStatus(authStatus,"Please sign in before submitting a tool.",true);
+    const button=document.getElementById("submitTool"); button.disabled=true; button.textContent="Submitting…";
+    const website_url=safeLink(document.getElementById("toolUrl").value.trim());
+    if(!website_url) { button.disabled=false; button.textContent="Send for review →"; return showStatus(authStatus,"Please enter a valid http or https website URL.",true); }
+    const payload={created_by:currentUser.id,name:document.getElementById("toolName").value.trim(),website_url,description:document.getElementById("toolDescription").value.trim(),category:categorySelect.value,pricing:document.getElementById("toolPricing").value,creator_name:document.getElementById("creatorName").value.trim() || null,status:"pending"};
+    const {error}=await supabaseClient.from("community_tools").insert(payload);
+    button.disabled=false; button.textContent="Send for review →";
+    if(error) return showStatus(authStatus,"Couldn't submit your tool: "+error.message,true);
+    event.target.reset();
+    showStatus(authStatus,"Thanks! Your submission is pending review and won't appear publicly until approved.");
+  });
+} else {
+  toolCount.textContent="Setup required";
+  list.innerHTML='<div class="empty">Community listings will appear here once the database is connected.</div>';
+}
+</script>
+</body>
+</html>
