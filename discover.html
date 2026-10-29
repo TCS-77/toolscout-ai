@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080610"><meta name="description" content="Discover AI tools with SIVELO SCOUT. Find the right tool, compare options and explore curated collections."><title>Discover AI — SIVELO SCOUT</title><link rel="icon" type="image/svg+xml" href="assets/sivelo-mark.svg">
+<style>
+:root{--bg:#080610;--panel:#100d1b;--panel2:#191329;--purple:#a78bfa;--text:#faf8ff;--muted:#aaa2bc;--line:#292139;--glow:#8b5cf633}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -18%,#54258a55,transparent 43%),var(--bg);color:var(--text);font:15px/1.6 system-ui,sans-serif}a{color:inherit;text-decoration:none}button,input,select{font:inherit}.wrap{width:min(1160px,calc(100% - 36px));margin:auto}header{position:sticky;top:0;z-index:20;background:#080610ed;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{height:68px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:8px;font-weight:900;letter-spacing:-.05em;font-size:1.1rem}.brand span{color:var(--purple)}.brand img{width:34px;height:34px;filter:drop-shadow(0 0 9px #8b5cf677)}nav{display:flex;gap:22px;color:var(--muted);font-size:.88rem}nav a:hover{color:white}.hero{text-align:center;padding:78px 0 52px}.eyebrow{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#c4aaff;font-weight:850}.hero h1{font-size:clamp(2.7rem,7vw,5rem);line-height:1.02;letter-spacing:-.075em;margin:18px auto;max-width:850px}.gradient{background:linear-gradient(100deg,#c4b5fd,#9333ea,#e9d5ff);background-clip:text;color:transparent}.hero p{color:var(--muted);max-width:650px;margin:0 auto 24px}.searchbar{display:flex;max-width:760px;margin:0 auto;background:#151122;border:1px solid #59417c;border-radius:15px;padding:6px;box-shadow:0 0 38px var(--glow)}.searchbar input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:white;padding:12px}.btn{border:0;border-radius:10px;padding:11px 17px;background:linear-gradient(135deg,#a78bfa,#7c3aed);color:white;font-weight:800;cursor:pointer}.btn:hover{filter:brightness(1.12);transform:translateY(-1px)}.btn.secondary{background:#171326;border:1px solid var(--line)}.hint{font-size:.75rem;color:#847b98;margin-top:12px}.section{padding:34px 0 50px;scroll-margin-top:90px}.sectionhead{display:flex;justify-content:space-between;gap:15px;align-items:end;margin-bottom:20px}.sectionhead h2{font-size:1.8rem;letter-spacing:-.05em;margin:4px 0}.muted{color:var(--muted);font-size:.9rem}.panel{background:linear-gradient(145deg,#171127,#0e0b17);border:1px solid var(--line);border-radius:20px;padding:24px}.finder{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center}.finder h2{font-size:2rem;line-height:1.1;letter-spacing:-.05em;margin:8px 0}.finder p{color:var(--muted)}.finder input{width:100%;background:#0c0914;border:1px solid #45345e;color:white;border-radius:11px;padding:14px;outline:0;margin:10px 0}.finder input:focus{border-color:var(--purple)}.suggestions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.suggestions button,.chip{border:1px solid var(--line);background:#151122;color:#c9c1d8;border-radius:30px;padding:7px 11px;font-size:.78rem;cursor:pointer}.suggestions button:hover,.chip.active,.chip:hover{border-color:var(--purple);color:white;background:#2b1d43}.resultbox{background:#0d0a16;border:1px solid #342747;border-radius:15px;padding:17px;min-height:190px}.resultbox h3{margin:0 0 8px}.recommend{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #292139}.recommend:last-child{border:0}.recommend small{display:block;color:var(--muted)}.score{color:#c4b5fd;font-size:.75rem}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.toolcard,.collection{border:1px solid var(--line);background:linear-gradient(145deg,#171127,#0f0c18);border-radius:16px;padding:18px;transition:transform .2s,border-color .2s,box-shadow .2s}.toolcard:hover,.collection:hover{transform:translateY(-4px);border-color:#7655a8;box-shadow:0 14px 45px #0005,0 0 22px #8b5cf615}.cardtop{display:flex;align-items:center;justify-content:space-between;gap:10px}.logo{width:40px;height:40px;border-radius:12px;background:#302044;border:1px solid #59417c;display:grid;place-items:center;color:#e6d9ff;font-weight:900}.tag{font-size:.68rem;color:#d5c3ff;background:#302044;padding:5px 9px;border-radius:30px}.toolcard h3{margin:13px 0 4px}.toolcard p{margin:0 0 13px;color:var(--muted);font-size:.84rem;min-height:42px}.meta{font-size:.73rem;color:#968da8}.cardactions{display:flex;gap:8px;margin-top:13px}.cardactions button{flex:1}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.comparebar{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-bottom:16px}.comparebar select{background:#100d19;color:white;border:1px solid #49365f;border-radius:9px;padding:10px;min-width:170px}.comparetable{width:100%;border-collapse:collapse;font-size:.86rem}.comparetable th,.comparetable td{padding:13px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}.comparetable th{color:#d8c9f7}.comparetable td{color:var(--muted)}.comparewrap{overflow:auto}.collections{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.collection{min-height:155px;display:flex;flex-direction:column;justify-content:space-between}.collection .symbol{font-size:1.5rem;color:#c4b5fd}.collection h3{margin:8px 0 3px}.collection p{margin:0;color:var(--muted);font-size:.82rem}.profile{position:fixed;inset:0;background:#03020bdc;backdrop-filter:blur(9px);z-index:40;display:none;align-items:center;justify-content:center;padding:18px}.profile.show{display:flex}.profilebox{width:min(100%,570px);background:linear-gradient(145deg,#211733,#100d1b);border:1px solid #72539a;border-radius:20px;padding:26px;position:relative;box-shadow:0 30px 100px #000b}.profilebox h2{margin:14px 0 5px}.profilebox p{color:var(--muted)}.close{position:absolute;right:14px;top:14px;background:#302044;color:white;border:0;border-radius:9px;width:34px;height:34px;cursor:pointer}.profileprice{padding:13px;background:#171126;border:1px solid var(--line);border-radius:10px;color:#ddd0f5}.empty{color:var(--muted);padding:24px;border:1px dashed var(--line);border-radius:13px;text-align:center}.kbd{font-size:.7rem;border:1px solid #54446b;border-radius:5px;padding:2px 5px;color:#c7badf}footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.82rem;margin-top:40px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;background:#211832;border:1px solid #72539a;color:white;padding:10px 15px;border-radius:10px;transition:.2s;z-index:60;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}@media(max-width:800px){.grid,.collections{grid-template-columns:repeat(2,1fr)}.finder{grid-template-columns:1fr}}@media(max-width:560px){nav{gap:10px;font-size:.76rem}.brand{font-size:.95rem}.brand img{width:29px}.hero{padding:55px 0 35px}.grid,.collections{grid-template-columns:1fr}.panel{padding:18px}.sectionhead{align-items:start;flex-direction:column}.searchbar .btn{padding:10px}.comparebar select{flex:1;min-width:0}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+</style></head><body>
+<header><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/sivelo-mark.svg" alt="">SIVELO <span>SCOUT</span></a><nav><a href="#finder">AI Finder</a><a href="#discover">Discover</a><a href="#compare">Compare</a><a href="#collections">Collections</a><a href="community.html">Community</a></nav></div></header>
+<main>
+<section class="hero wrap"><div class="eyebrow">THE TOOLS BEHIND TOMORROW</div><h1>Find your next<br><span class="gradient">unfair advantage.</span></h1><p>Tell us what you're trying to do. Explore standout AI tools, compare your options, and find the right fit without the endless searching.</p><div class="searchbar"><input id="globalSearch" placeholder="Search tools, tasks, categories…" aria-label="Search tools"><button class="btn" id="globalSearchBtn">Explore →</button></div><div class="hint">Press <span class="kbd">Ctrl</span> + <span class="kbd">K</span> anytime to search</div></section>
+<section class="wrap section" id="finder"><div class="panel finder"><div><div class="eyebrow">SIVELO AI FINDER</div><h2>What do you want to make possible?</h2><p>Describe your goal in your own words. We'll match it to tools in the directory and explain why they fit.</p><input id="goal" placeholder="e.g. Make cinematic videos for my brand"><button class="btn" id="findBtn">Find my tools ✦</button><div class="suggestions"><button data-prompt="Build a website without coding">Build a website</button><button data-prompt="Create realistic AI videos">Create AI videos</button><button data-prompt="Automate customer support">Automate support</button><button data-prompt="Research and write better">Research & writing</button></div></div><div class="resultbox" id="finderResults"><div class="eyebrow">YOUR DISCOVERY</div><h3>Your recommendations appear here</h3><p class="muted">Start with a goal and SIVELO will surface relevant tools from its directory.</p></div></div></section>
+<section class="wrap section" id="discover"><div class="sectionhead"><div><div class="eyebrow">EXPLORE THE FRONTIER</div><h2>Discover AI tools</h2><div class="muted">Browse the directory, uncover hidden gems, and open detailed tool profiles.</div></div><div class="muted" id="resultCount"></div></div><div class="filters" id="categoryFilters"></div><div class="grid" id="toolGrid"></div><div class="empty" id="noTools" hidden>No matches yet. Try another search or category.</div></section>
+<section class="wrap section" id="compare"><div class="sectionhead"><div><div class="eyebrow">MAKE THE RIGHT CALL</div><h2>Compare tools side by side</h2><div class="muted">Choose up to three tools. Compare their purpose, category and listed pricing.</div></div></div><div class="panel"><div class="comparebar"><select id="compareA" aria-label="First tool"></select><select id="compareB" aria-label="Second tool"></select><select id="compareC" aria-label="Third tool"><option value="">Add a third tool (optional)</option></select><button class="btn" id="compareBtn">Compare</button></div><div class="comparewrap" id="compareOutput"><div class="empty">Choose two or three tools to see a side-by-side comparison.</div></div></div></section>
+<section class="wrap section" id="collections"><div class="sectionhead"><div><div class="eyebrow">CURATED BY SIVELO</div><h2>Collections worth exploring</h2><div class="muted">Handpicked starting points for the things you want to do.</div></div></div><div class="collections" id="collectionGrid"></div></section>
+</main><footer><div class="wrap foot"><strong><img src="assets/sivelo-mark.svg" alt="" style="width:22px;vertical-align:middle"> SIVELO SCOUT</strong><span>Discover What's Next. · <a href="index.html">Main directory</a> · <a href="community.html">Community</a></span></div></footer>
+<div class="profile" id="profileModal" role="presentation"><section class="profilebox" role="dialog" aria-modal="true" aria-labelledby="profileTitle"><button class="close" id="closeProfile" aria-label="Close">×</button><div class="eyebrow" id="profileCategory"></div><h2 id="profileTitle"></h2><p id="profileDescription"></p><div class="profileprice"><strong>Pricing information</strong><br><span id="profilePricing"></span><br><small>Pricing and features can change. Confirm details with the provider.</small></div><div class="cardactions"><a class="btn" id="profileVisit" target="_blank" rel="noopener noreferrer">Visit official website ↗</a><button class="btn secondary" id="profileCompare">Add to comparison</button></div></section></div><div class="toast" id="toast" role="status"></div>
+<script>
+const tools = [
+["ChatGPT","Writing","C","AI assistant for writing, brainstorming, learning and everyday tasks.","Free tier and paid plans","https://chatgpt.com/"],
+["Claude","Writing","Cl","AI assistant for writing, analysis, coding and long documents.","Free tier and paid plans","https://claude.ai/"],
+["Gemini","Writing","G","Google AI assistant for research, writing and creative tasks.","Free access and paid plans","https://gemini.google.com/"],
+["Perplexity","Writing","P","AI-powered search and answers with source references.","Free tier and paid plans","https://www.perplexity.ai/"],
+["Grammarly","Writing","Gr","Improve grammar, clarity, tone and written communication.","Free tier and paid plans","https://www.grammarly.com/"],
+["DeepL","Writing","D","Translation and writing tools for communicating across languages.","Free tier and paid plans","https://www.deepl.com/"],
+["QuillBot","Writing","Q","Paraphrasing, summarizing and writing assistance.","Free tier and paid plans","https://quillbot.com/"],
+["Jasper","Writing","J","AI writing platform for marketing and brand content.","Paid plans","https://www.jasper.ai/"],
+["Copy.ai","Writing","Co","AI-assisted copywriting and go-to-market workflows.","Free access and paid plans","https://www.copy.ai/"],
+["Writesonic","Writing","W","AI writing and content creation platform.","Free access and paid plans","https://writesonic.com/"],
+
+["Canva","Image & Design","Ca","Design graphics, presentations and social content with AI features.","Free tier and paid plans","https://www.canva.com/"],
+["Midjourney","Image & Design","M","Create imaginative AI-generated images from text prompts.","Paid plans","https://www.midjourney.com/"],
+["Adobe Firefly","Image & Design","F","Generate and edit images and creative assets with AI.","Free credits and paid plans","https://firefly.adobe.com/"],
+["Ideogram","Image & Design","I","AI image generation, including images with text.","Free access and paid plans","https://ideogram.ai/"],
+["Leonardo AI","Image & Design","L","Create illustrations, concepts and visual assets.","Free access and paid plans","https://leonardo.ai/"],
+["Recraft","Image & Design","R","AI design and image generation for graphics and visual assets.","Free access and paid plans","https://www.recraft.ai/"],
+
+["Runway","Video","Ru","AI tools for generating and editing video.","Limited free access and paid plans","https://runwayml.com/"],
+["Pika","Video","P","Generate and transform short video clips using AI.","Free access and paid plans","https://pika.art/"],
+["Synthesia","Video","S","Create presenter videos using AI avatars and speech.","Paid plans and limited free access","https://www.synthesia.io/"],
+["HeyGen","Video","H","AI video creation with avatars, translation and voice features.","Free access and paid plans","https://www.heygen.com/"],
+["Descript","Video","D","Edit audio and video using text-based editing tools.","Free tier and paid plans","https://www.descript.com/"],
+
+["Cursor","Coding","Cu","AI-powered code editor for understanding and writing code.","Free tier and paid plans","https://www.cursor.com/"],
+["GitHub Copilot","Coding","GH","AI coding assistant for writing and improving software.","Free access and paid plans","https://github.com/features/copilot"],
+["Replit","Coding","Re","Online development environment with AI app-building features.","Free tier and paid plans","https://replit.com/"],
+["v0","Coding","v0","Generate web interfaces and application designs from prompts.","Free access and paid plans","https://v0.app/"],
+["Windsurf","Coding","Wi","AI-assisted development environment and coding workflows.","Free tier and paid plans","https://windsurf.com/"],
+
+["ElevenLabs","Audio & Music","11","AI voice generation, text-to-speech and audio tools.","Free tier and paid plans","https://elevenlabs.io/"],
+["Suno","Audio & Music","Su","Generate songs and musical ideas using text prompts.","Free access and paid plans","https://suno.com/"],
+["Udio","Audio & Music","U","AI music creation and song generation platform.","Free access and paid plans","https://www.udio.com/"],
+["Otter.ai","Audio & Music","O","Transcribe meetings and create conversation summaries.","Free tier and paid plans","https://otter.ai/"],
+["AIVA","Audio & Music","A","AI-assisted music composition for creative projects.","Free access and paid plans","https://www.aiva.ai/"],
+
+["Notion AI","Productivity","N","AI features for notes, documents and project management.","Plan-dependent features","https://www.notion.com/"],
+["Microsoft Copilot","Productivity","MC","AI assistant integrated with Microsoft products and services.","Free access and paid plans","https://copilot.microsoft.com/"],
+["Google NotebookLM","Productivity","N","Work with your sources and create AI-generated summaries.","Free access; features may vary","https://notebooklm.google.com/"],
+["Mem","Productivity","Me","AI-powered workspace for organizing notes and information.","Paid plans","https://mem.ai/"],
+["Motion","Productivity","Mo","AI-assisted planning, scheduling and task management.","Paid plans","https://www.usemotion.com/"],
+
+["Elicit","Research","E","AI research assistant for finding and analyzing academic papers.","Free tier and paid plans","https://elicit.com/"],
+["Consensus","Research","Co","Search scientific research and explore evidence-based answers.","Free tier and paid plans","https://consensus.app/"],
+["ResearchRabbit","Research","R","Discover related academic papers and research connections.","Free access","https://www.researchrabbit.ai/"],
+["Scite","Research","Sc","Explore scientific citations and how research is referenced.","Free access and paid plans","https://scite.ai/"],
+["Semantic Scholar","Research","SS","AI-powered academic search and research discovery.","Free access","https://www.semanticscholar.org/"],
+
+["Surfer SEO","Marketing","S","SEO content research and optimization tools.","Paid plans","https://surferseo.com/"],
+["HubSpot","Marketing","H","Marketing, sales and customer service platform with AI features.","Free tools and paid plans","https://www.hubspot.com/"],
+["AdCreative.ai","Marketing","Ad","Generate advertising creative and marketing assets.","Paid plans","https://www.adcreative.ai/"],
+["Predis.ai","Marketing","P","Create social media content and marketing assets with AI.","Free access and paid plans","https://predis.ai/"],
+["Buffer","Marketing","B","Plan, publish and analyze social media content.","Free tier and paid plans","https://buffer.com/"],
+
+["Shopify","Business","Sh","E-commerce platform with AI-assisted business features.","Paid plans","https://www.shopify.com/"],
+["Intercom","Business","In","Customer service platform with AI support agents.","Paid plans","https://www.intercom.com/"],
+["Pipedrive","Business","Pi","Sales CRM with tools to manage leads and customer relationships.","Paid plans","https://www.pipedrive.com/"],
+["Freshworks","Business","Fr","Business software for customer support and sales with AI features.","Free access and paid plans","https://www.freshworks.com/"],
+["Fireflies.ai","Business","Fi","AI meeting assistant for transcription and meeting insights.","Free tier and paid plans","https://fireflies.ai/"],
+
+["Make","Automation","Ma","Visual platform for connecting apps and automating workflows.","Free tier and paid plans","https://www.make.com/"],
+["Zapier","Automation","Z","Connect apps and automate repetitive tasks.","Free tier and paid plans","https://zapier.com/"],
+["n8n","Automation","n8n","Build custom workflows connecting services and AI models.","Self-hosted and paid cloud plans","https://n8n.io/"],
+["Bardeen","Automation","Ba","Automate browser and work tasks with AI-assisted workflows.","Free access and paid plans","https://www.bardeen.ai/"],
+["Lindy","Automation","Li","Build AI assistants to automate repetitive work tasks.","Free access and paid plans","https://www.lindy.ai/"],
+
+["Khan Academy Khanmigo","Education","K","AI-powered learning and tutoring experience.","Availability and pricing vary","https://www.khanacademy.org/khan-labs"],
+["Duolingo Max","Education","Du","Language-learning platform with AI-powered learning features.","Paid plan; availability varies","https://www.duolingo.com/"],
+["Quizlet","Education","Q","Study tools, flashcards and AI-assisted learning features.","Free tier and paid plans","https://quizlet.com/"],
+["Socratic","Education","So","Learning assistant for exploring school questions and concepts.","Free access; features may vary","https://socratic.org/"],
+["Wolfram Alpha","Education","W","Computational knowledge engine for math and technical learning.","Free access and paid plans","https://www.wolframalpha.com/"],
+
+["Tableau","Data & Analytics","T","Data visualization and business intelligence platform.","Free options and paid plans","https://www.tableau.com/"],
+["Power BI","Data & Analytics","BI","Business analytics and interactive data visualization.","Free options and paid plans","https://powerbi.microsoft.com/"],
+["Julius AI","Data & Analytics","J","Analyze data and create visualizations using natural language.","Free access and paid plans","https://julius.ai/"],
+["Obviously AI","Data & Analytics","O","No-code predictive analytics and machine learning tools.","Paid plans","https://www.obviously.ai/"],
+["DataRobot","Data & Analytics","DR","Enterprise AI and machine learning platform for analytics.","Enterprise plans","https://www.datarobot.com/"],
+
+["Mistral Le Chat","AI Assistants","Mi","AI assistant for research, writing, coding and everyday questions.","Free access and paid plans","https://chat.mistral.ai/"],
+["Grok","AI Assistants","G","AI assistant for conversation, research and creative tasks.","Free access and paid plans","https://grok.com/"],
+["Meta AI","AI Assistants","Me","AI assistant for answering questions and creative help across Meta services.","Free access; features vary","https://www.meta.ai/"],
+
+["FLUX","Image Generation","FL","AI image models for generating detailed images from prompts.","Models and access options vary","https://blackforestlabs.ai/"],
+["Krea","Image Generation","Kr","AI creative platform for image generation, enhancement and real-time visuals.","Free access and paid plans","https://www.krea.ai/"],
+["Playground","Image Generation","Pl","AI image creation and design workspace.","Free access and paid plans","https://playground.com/"],
+
+["Kling AI","Video Generation","K","Generate AI videos and animate images from prompts.","Free credits and paid plans","https://klingai.com/"],
+["Luma Dream Machine","Video Generation","Lu","Create videos from text and images with generative AI.","Free access and paid plans","https://lumalabs.ai/dream-machine"],
+["Veo","Video Generation","V","Google's generative video model for creating video from prompts.","Access and pricing vary","https://deepmind.google/models/veo/"],
+
+["Speechify","Voice & Speech","Sp","Text-to-speech and AI voice tools for listening and narration.","Free access and paid plans","https://speechify.com/"],
+["Murf AI","Voice & Speech","Mu","Create voiceovers with AI text-to-speech voices.","Free trial and paid plans","https://murf.ai/"],
+["Deepgram","Voice & Speech","De","Speech-to-text and text-to-speech APIs for developers.","Usage-based pricing","https://deepgram.com/"],
+
+["Manus","AI Agents","Ma","General-purpose AI agent for completing multi-step tasks.","Access and pricing vary","https://manus.im/"],
+["Relevance AI","AI Agents","Re","Build and deploy AI agents and multi-step workflows.","Free access and paid plans","https://relevanceai.com/"],
+["CrewAI","AI Agents","Cr","Framework and platform for building teams of collaborating AI agents.","Open-source and paid options","https://www.crewai.com/"],
+
+["Tidio","Customer Support","Ti","Customer service platform with AI-powered support automation.","Free access and paid plans","https://www.tidio.com/"],
+["Ada","Customer Support","Ad","AI customer service automation for support conversations.","Enterprise plans","https://www.ada.cx/"],
+["Chatbase","Customer Support","Ch","Build AI support agents trained on your business content.","Free access and paid plans","https://www.chatbase.co/"],
+
+["Rask AI","Translation","Ra","AI video translation and dubbing for multilingual content.","Paid plans and trial options","https://www.rask.ai/"],
+["Maestra","Translation","Ma","AI transcription, subtitles, translation and dubbing tools.","Free trial and paid plans","https://maestra.ai/"],
+["Papago","Translation","Pa","Machine translation for text, images and conversations.","Free access","https://papago.naver.com/"],
+
+["Gamma","Presentations","Ga","Create presentations, documents and webpages with AI.","Free access and paid plans","https://gamma.app/"],
+["Beautiful.ai","Presentations","Be","Presentation software with AI-assisted slide creation and design.","Paid plans and trial options","https://www.beautiful.ai/"],
+["Pitch","Presentations","Pi","Collaborative presentation platform with AI-assisted creation.","Free tier and paid plans","https://pitch.com/"],
+
+["Ramp","Finance","Ra","Finance operations platform with automation and AI features.","Business plans","https://ramp.com/"],
+["Brex","Finance","Br","Business finance platform for cards, expenses and financial workflows.","Business plans","https://www.brex.com/"],
+["Vic.ai","Finance","Vi","AI-powered accounts payable and invoice processing automation.","Business plans","https://www.vic.ai/"],
+
+["Microsoft Security Copilot","Cybersecurity","SC","AI assistant that helps security teams investigate and respond to threats.","Enterprise plans","https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-security-copilot"],
+["Darktrace","Cybersecurity","Da","Cybersecurity platform using AI to detect and respond to threats.","Business plans","https://www.darktrace.com/"],
+["Snyk","Cybersecurity","Sy","Developer security platform with AI-assisted code and vulnerability analysis.","Free access and paid plans","https://snyk.io/"],
+
+["Superhuman","Email","Su","AI-powered email app for faster inbox and communication workflows.","Paid plans","https://superhuman.com/"],
+["Shortwave","Email","Sh","AI email client for searching, summarizing and managing your inbox.","Free access and paid plans","https://www.shortwave.com/"],
+["Lavender","Email","La","AI email assistant that helps improve sales email quality.","Free access and paid plans","https://www.lavender.ai/"],
+
+["Granola","Meetings & Notes","Gr","AI meeting notes app that turns conversations into useful notes.","Free access and paid plans","https://www.granola.ai/"],
+["Fathom","Meetings & Notes","Fa","AI meeting assistant for recording, transcription and summaries.","Free access and paid plans","https://fathom.video/"],
+["tl;dv","Meetings & Notes","tl","Record, transcribe and summarize online meetings with AI.","Free access and paid plans","https://tldv.io/"],
+
+["Lovable","Website & App Builders","Lo","Build full-stack web applications from natural-language prompts.","Free access and paid plans","https://lovable.dev/"],
+["Bolt.new","Website & App Builders","Bo","Create and run full-stack web apps directly from a prompt.","Free access and paid plans","https://bolt.new/"],
+["Framer","Website & App Builders","Fr","Design and publish websites with AI-assisted site generation.","Free access and paid plans","https://www.framer.com/"],
+
+["OpenAI API","AI Models & APIs","OA","Build applications with OpenAI models through developer APIs.","Usage-based pricing","https://platform.openai.com/"],
+["Google AI Studio","AI Models & APIs","GA","Prototype with Google's generative AI models and developer tools.","Free access; usage limits apply","https://aistudio.google.com/"],
+["Hugging Face","AI Models & APIs","HF","Discover and use open machine-learning models, datasets and demos.","Free access and paid options","https://huggingface.co/"],
+
+["Ollama","AI Infrastructure","Ol","Run and manage large language models locally on your computer.","Free and open source","https://ollama.com/"],
+["Pinecone","AI Infrastructure","Pi","Vector database platform for search and AI application retrieval.","Free tier and paid plans","https://www.pinecone.io/"],
+["Weaviate","AI Infrastructure","We","Open-source vector database for AI-powered search and applications.","Free options and paid plans","https://weaviate.io/"],
+
+["Semrush","SEO","Se","SEO and online visibility platform with AI-powered marketing features.","Paid plans and trial options","https://www.semrush.com/"],
+["Ahrefs","SEO","Ah","SEO research suite for keywords, backlinks and site performance.","Free tools and paid plans","https://ahrefs.com/"],
+["Clearscope","SEO","Cl","Content optimization platform for improving search-focused writing.","Paid plans","https://www.clearscope.io/"],
+
+["Apollo.io","Sales & CRM","Ap","Sales intelligence and outreach platform with AI-assisted workflows.","Free access and paid plans","https://www.apollo.io/"],
+["Clay","Sales & CRM","Cl","Sales prospecting and data enrichment with automated workflows.","Free access and paid plans","https://www.clay.com/"],
+["Gong","Sales & CRM","Go","Revenue intelligence platform that analyzes customer conversations.","Paid plans","https://www.gong.io/"],
+
+["Eightfold AI","HR & Recruiting","Ei","Talent intelligence platform for recruiting and workforce planning.","Enterprise plans","https://eightfold.ai/"],
+["HireVue","HR & Recruiting","Hi","Hiring platform with AI-supported assessments and interview workflows.","Business plans","https://www.hirevue.com/"],
+["Teal","HR & Recruiting","Te","Career platform with AI-assisted resumes and job search tools.","Free access and paid plans","https://www.tealhq.com/"],
+
+["Harvey","Legal","Ha","AI platform built for legal research and professional legal workflows.","Enterprise plans","https://www.harvey.ai/"],
+["Spellbook","Legal","Sp","AI contract drafting and review tools for legal professionals.","Paid plans","https://spellbook.legal/"],
+["CoCounsel","Legal","Co","AI legal assistant for research, document review and professional workflows.","Paid plans","https://www.cocounsel.com/"],
+
+["Meshy","3D & Game Development","Me","Generate 3D models and textures from text or images.","Free access and paid plans","https://www.meshy.ai/"],
+["Tripo AI","3D & Game Development","Tr","Create 3D assets from text and image prompts.","Free access and paid plans","https://www.tripo3d.ai/"],
+["Kaedim","3D & Game Development","Ka","Turn 2D concepts into production-ready 3D assets.","Paid plans","https://www.kaedim3d.com/"],
+
+["DeepSeek","AI Assistants","DS","AI assistant for reasoning, coding, research and everyday questions.","Free access and paid API options","https://www.deepseek.com/"],
+["Qwen Chat","AI Assistants","Qw","AI assistant from Alibaba for conversation, coding and multimodal tasks.","Free access; features vary","https://chat.qwen.ai/"],
+["Poe","AI Assistants","Po","Explore and chat with a range of AI models and custom bots.","Free access and paid plans","https://poe.com/"],
+["You.com","AI Assistants","Yo","AI search and assistant platform for research and productivity.","Free access and paid plans","https://you.com/"],
+
+["DALL·E","Image Generation","Da","Generate images from text prompts with OpenAI image tools.","Access through ChatGPT plans","https://chatgpt.com/"],
+["NightCafe","Image Generation","Ni","Create AI artwork using different image generation models.","Free credits and paid options","https://nightcafe.studio/"],
+["Artbreeder","Image Generation","Ar","Create and remix images using generative creative tools.","Free access and paid plans","https://www.artbreeder.com/"],
+["Tensor.Art","Image Generation","Te","Explore AI image generation models and community workflows.","Free access and paid options","https://tensor.art/"],
+["OpenArt","Image Generation","OA","AI image creation, editing and creative workflows.","Free access and paid plans","https://openart.ai/"],
+
+["CapCut","Video","Ca","Video editor with AI-powered editing, captions and creative features.","Free access and paid options","https://www.capcut.com/"],
+["OpusClip","Video","Op","Turn long videos into short clips with AI-assisted editing.","Free access and paid plans","https://www.opus.pro/"],
+["InVideo AI","Video","In","Create videos from prompts, scripts and media assets.","Free access and paid plans","https://invideo.io/"],
+["D-ID","Video","D","Create talking-avatar videos from images and text.","Free trial and paid plans","https://www.d-id.com/"],
+["Hailuo AI","Video","Ha","Generate videos from text and images using generative AI.","Free credits and paid options","https://hailuoai.video/"],
+
+["Auphonic","Audio & Music","Au","Automatically level, clean and process spoken audio and podcasts.","Free monthly hours and paid plans","https://auphonic.com/"],
+["Adobe Podcast","Audio & Music","AP","Enhance spoken audio and simplify podcast recording and editing.","Free tools and paid options","https://podcast.adobe.com/"],
+["Kits AI","Audio & Music","Ki","AI voice and music production tools for creators.","Free access and paid plans","https://www.kits.ai/"],
+["LANDR","Audio & Music","La","Music production platform with AI mastering and creator tools.","Paid plans and services","https://www.landr.com/"],
+
+["Vapi","Voice Agents","Va","Developer platform for building AI voice agents and phone experiences.","Usage-based pricing","https://vapi.ai/"],
+["Retell AI","Voice Agents","Re","Build AI phone agents for customer conversations and workflows.","Usage-based pricing","https://www.retellai.com/"],
+["Bland AI","Voice Agents","Bl","Create AI phone agents for business calls and customer workflows.","Usage-based pricing","https://www.bland.ai/"],
+["ElevenLabs Agents","Voice Agents","EA","Build conversational voice agents with speech and tool integrations.","Free access and paid plans","https://elevenlabs.io/agents"],
+
+["Dify","AI Agents","Di","Open-source platform for building AI applications and agent workflows.","Free self-hosted and cloud plans","https://dify.ai/"],
+["Botpress","AI Agents","Bo","Build and deploy AI agents for customer conversations and tasks.","Free access and paid plans","https://botpress.com/"],
+["AutoGPT","AI Agents","Au","Open-source platform for creating autonomous AI workflows.","Open-source and paid options","https://agpt.co/"],
+["Langflow","AI Agents","Lf","Visual builder for AI agents and language-model workflows.","Free and open source; cloud options","https://www.langflow.org/"],
+["Voiceflow","AI Agents","Vo","Design and deploy conversational AI agents for chat and voice.","Free access and paid plans","https://www.voiceflow.com/"],
+
+["Cline","Coding","Cl","Open-source coding agent that works inside supported code editors.","Free and open source; model usage may cost","https://cline.bot/"],
+["Aider","Coding","Ai","Terminal-based AI pair programming tool for editing code repositories.","Free and open source; model usage may cost","https://aider.chat/"],
+["Sourcegraph Cody","Coding","SC","AI coding assistant for understanding and working across codebases.","Free access and paid plans","https://sourcegraph.com/cody"],
+["Claude Code","Coding","CC","Agentic coding tool for working with code from the terminal.","Paid plan or API usage","https://www.anthropic.com/claude-code"],
+["Codex","Coding","Co","AI coding agent for software development tasks and code changes.","Plan and usage availability varies","https://openai.com/codex/"],
+
+["Figma","Image & Design","Fi","Collaborative interface design platform with AI-powered design features.","Free tier and paid plans","https://www.figma.com/"],
+["Kittl","Image & Design","Ki","Online design platform for graphics, typography and creative assets.","Free access and paid plans","https://www.kittl.com/"],
+["Photoroom","Image & Design","Ph","AI photo editing and background tools for product images.","Free access and paid plans","https://www.photoroom.com/"],
+["Remove.bg","Image & Design","Rb","Automatically remove image backgrounds.","Free previews and paid credits","https://www.remove.bg/"],
+["Clipdrop","Image & Design","Cd","AI-powered image cleanup, relighting and editing tools.","Free access and paid options","https://clipdrop.co/"],
+
+["MagicSchool AI","Education","MS","AI tools designed to support teachers and classroom workflows.","Free access and paid plans","https://www.magicschool.ai/"],
+["SchoolAI","Education","Sc","AI learning spaces and tools for educators and students.","Free access and paid plans","https://schoolai.com/"],
+["Photomath","Education","Ph","Step-by-step math learning and problem-solving app.","Free access and paid subscription","https://photomath.com/"],
+["Coursera","Education","Co","Online learning platform with AI-supported learning and career tools.","Free courses and paid plans","https://www.coursera.org/"],
+
+["Hex","Data & Analytics","He","Collaborative analytics workspace for SQL, Python and AI-powered data work.","Free access and paid plans","https://hex.tech/"],
+["DataLab","Data & Analytics","DL","Cloud data science notebooks with AI-assisted analysis.","Free access and paid plans","https://www.datacamp.com/datalab"],
+["Akkio","Data & Analytics","Ak","No-code AI platform for building predictive models from business data.","Paid plans","https://www.akkio.com/"],
+["Rows","Data & Analytics","Ro","Spreadsheet platform with integrations and AI data workflows.","Free access and paid plans","https://rows.com/"],
+
+["Hootsuite","Social Media","Ho","Manage, schedule and analyze social media content across channels.","Paid plans and trial options","https://www.hootsuite.com/"],
+["Later","Social Media","La","Plan and schedule social media posts with creator-focused tools.","Free access and paid plans","https://later.com/"],
+["Metricool","Social Media","Me","Plan, publish and analyze social media and advertising performance.","Free access and paid plans","https://metricool.com/"],
+["SocialBee","Social Media","SB","AI-assisted social media content creation and scheduling.","Paid plans and trial options","https://socialbee.com/"],
+
+["GPTZero","AI Detection","GZ","AI writing detection and authorship analysis tools.","Free access and paid plans","https://gptzero.me/"],
+["Originality.ai","AI Detection","Or","AI content detection and plagiarism checking for publishers.","Paid plans","https://originality.ai/"],
+["Winston AI","AI Detection","Wi","AI-generated text and image detection for educators and publishers.","Free trial and paid plans","https://gowinston.ai/"],
+
+["Interior AI","Interior Design","In","Generate interior design concepts and room visualizations with AI.","Paid plans","https://interiorai.com/"],
+["RoomGPT","Interior Design","RG","Generate redesigned room concepts from uploaded room photos.","Free access and paid options","https://www.roomgpt.io/"],
+["ReimagineHome","Interior Design","RH","AI visualization for interior design, landscaping and property staging.","Free trial and paid plans","https://www.reimaginehome.ai/"],
+
+["Kickresume","Job Search","Kr","Create resumes and cover letters with AI assistance.","Free access and paid plans","https://www.kickresume.com/"],
+["Rezi","Job Search","Re","AI resume builder focused on job applications and ATS formatting.","Free access and paid plans","https://www.rezi.ai/"],
+["Huntr","Job Search","Hu","Organize job searches and create tailored application materials.","Free access and paid plans","https://huntr.co/"],
+
+["Abridge","Healthcare","Ab","AI clinical documentation assistant for healthcare conversations.","Healthcare organization plans","https://www.abridge.com/"],
+["OpenEvidence","Healthcare","OE","Medical information platform designed for clinicians.","Free access for eligible clinicians","https://www.openevidence.com/"],
+["Nabla","Healthcare","Na","AI assistant for clinical documentation and healthcare workflows.","Healthcare plans","https://www.nabla.com/"],
+
+["Shopify Magic","E-commerce","SM","AI features for product content, store operations and commerce workflows.","Included features vary by Shopify plan","https://www.shopify.com/magic"],
+["Octane AI","E-commerce","Oc","Interactive quizzes and personalization tools for ecommerce stores.","Paid plans","https://www.octaneai.com/"],
+["Gorgias","E-commerce","Go","Customer support platform with AI automation for ecommerce brands.","Paid plans","https://www.gorgias.com/"],
+
+["Qdrant","AI Infrastructure","Qd","Open-source vector search engine and vector database.","Free self-hosted and cloud plans","https://qdrant.tech/"],
+["Chroma","AI Infrastructure","Ch","Open-source database for AI applications and retrieval workflows.","Free and open source; cloud options","https://www.trychroma.com/"],
+["Modal","AI Infrastructure","Mo","Cloud platform for running compute-heavy AI and data workloads.","Usage-based pricing","https://modal.com/"],
+["Replicate","AI Models & APIs","Rp","Run and integrate machine-learning models through APIs.","Usage-based pricing","https://replicate.com/"],
+["Together AI","AI Models & APIs","TA","Platform for accessing and running open AI models through APIs.","Usage-based pricing","https://www.together.ai/"],
+
+["Asana","Productivity","As","Project management platform with AI features for coordinating work.","Free tier and paid plans","https://asana.com/"],
+["ClickUp","Productivity","Cl","Work management platform with AI tools for tasks and documents.","Free tier and paid AI options","https://clickup.com/"],
+["Airtable","Productivity","Ai","Flexible database and workflow platform with AI features.","Free tier and paid plans","https://www.airtable.com/"],
+["Taskade","Productivity","Ta","AI-powered workspace for tasks, projects and agents.","Free access and paid plans","https://www.taskade.com/"],
+["Mindtrip","Travel & Lifestyle","Mi","AI trip planner for discovering destinations and organizing travel itineraries.","Free access and paid options","https://mindtrip.ai/"]
+];
+const categories=["All",...new Set(tools.map(t=>t[1]))];
+const $=id=>document.getElementById(id);
+let activeCategory="All",currentQuery="",compareSelection=[];
+const safe=(s)=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function notify(message){$("toast").textContent=message;$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),1900)}
+function scoreTool(t,q){const words=q.toLowerCase().split(/[^a-z0-9]+/).filter(w=>w.length>2);const text=t.join(" ").toLowerCase();let score=0;for(const w of words){if(t[0].toLowerCase().includes(w))score+=5;if(t[1].toLowerCase().includes(w))score+=4;if(t[3].toLowerCase().includes(w))score+=3;if(t[4].toLowerCase().includes(w))score+=1;}const aliases={"video":["video","film","cinematic","clip","movie"],"image":["image","photo","picture","art","design"],"website":["website","web","site","app","build"],"coding":["code","coding","program","developer","software"],"writing":["write","writing","blog","essay","content"],"research":["research","search","sources","study"],"music":["music","song","audio","sound"],"voice":["voice","speech","call","phone"],"business":["business","company","sales","startup"],"automation":["automate","automation","workflow","agent"],"support":["support","customer","chatbot","service"],"presentation":["slides","presentation","pitch","deck"],"resume":["resume","cv","job","career"],"travel":["travel","trip","vacation","itinerary"]};for(const [key,terms] of Object.entries(aliases))if(terms.some(x=>q.toLowerCase().includes(x))&&(text.includes(key)||terms.some(x=>text.includes(x))))score+=4;return score}
+function card(t){const i=tools.indexOf(t);return '<article class="toolcard"><div class="cardtop"><div class="logo">'+safe(t[2])+'</div><span class="tag">'+safe(t[1])+'</span></div><h3>'+safe(t[0])+'</h3><p>'+safe(t[3])+'</p><div class="meta">'+safe(t[4])+'</div><div class="cardactions"><button class="btn secondary" data-profile="'+i+'">View profile</button><button class="btn" data-add="'+i+'">Compare +</button></div></article>'}
+function renderTools(){const q=currentQuery.toLowerCase();const list=tools.filter(t=>(activeCategory==="All"||t[1]===activeCategory)&&(!q||t.join(" ").toLowerCase().includes(q)));$("toolGrid").innerHTML=list.map(card).join("");$("resultCount").textContent=list.length+" of "+tools.length+" tools";$("noTools").hidden=!!list.length}
+function buildFilters(){$("categoryFilters").innerHTML=categories.map(c=>'<button class="chip '+(c===activeCategory?"active":"")+'" data-category="'+safe(c)+'">'+safe(c)+'</button>').join("")}
+function runFinder(){const q=$("goal").value.trim();if(!q){notify("Tell us what you're trying to do first.");$("goal").focus();return}const ranked=tools.map(t=>({t,s:scoreTool(t,q)})).sort((a,b)=>b.s-a.s).slice(0,5);const picks=ranked.filter(x=>x.s>0);const chosen=(picks.length?picks:ranked.slice(0,3));$("finderResults").innerHTML='<div class="eyebrow">YOUR DISCOVERY</div><h3>'+ (picks.length?"Strong matches for your goal":"A few places to start") +'</h3>'+chosen.slice(0,4).map(x=>'<div class="recommend"><div><strong>'+safe(x.t[0])+'</strong><small>'+safe(x.t[3])+'</small></div><span class="score">'+(x.s?"Relevant match":"Explore")+'</span></div>').join("")+'<p class="hint">Recommendations are matched from tool names, categories and descriptions—not generated by a live AI model.</p>'}
+function showProfile(i){const t=tools[i];if(!t)return;$("profileCategory").textContent=t[1];$("profileTitle").textContent=t[0];$("profileDescription").textContent=t[3];$("profilePricing").textContent=t[4];$("profileVisit").href=t[5];$("profileCompare").dataset.add=String(i);$("profileModal").classList.add("show")}
+function fillSelect(el,placeholder){el.innerHTML='<option value="">'+placeholder+'</option>'+tools.map((t,i)=>'<option value="'+i+'">'+safe(t[0])+'</option>').join("")}
+function addCompare(i){if(compareSelection.includes(i)){notify("Already in your comparison.");return}if(compareSelection.length===3){notify("You can compare up to three tools.");return}compareSelection.push(i);syncCompare();notify(tools[i][0]+" added")}
+function syncCompare(){["compareA","compareB","compareC"].forEach((id,n)=>{const el=$(id);fillSelect(el,n===0?"Choose first tool":n===1?"Choose second tool":"Add a third tool (optional)");el.value=compareSelection[n]===undefined?"":String(compareSelection[n])})}
+function doCompare(){const ids=["compareA","compareB","compareC"].map(id=>$(id).value).filter(x=>x!=="").map(Number);if(new Set(ids).size!==ids.length){notify("Choose different tools to compare.");return}if(ids.length<2){notify("Choose at least two tools.");return}compareSelection=ids;const chosen=ids.map(i=>tools[i]);$("compareOutput").innerHTML='<table class="comparetable"><thead><tr><th>What to compare</th>'+chosen.map(t=>'<th>'+safe(t[0])+'</th>').join("")+'</tr></thead><tbody><tr><th>Category</th>'+chosen.map(t=>'<td>'+safe(t[1])+'</td>').join("")+'</tr><tr><th>Best for</th>'+chosen.map(t=>'<td>'+safe(t[3])+'</td>').join("")+'</tr><tr><th>Listed pricing</th>'+chosen.map(t=>'<td>'+safe(t[4])+'</td>').join("")+'</tr><tr><th>Official website</th>'+chosen.map(t=>'<td><a style="color:#c4b5fd" href="'+safe(t[5])+'" target="_blank" rel="noopener noreferrer">Visit ↗</a></td>').join("")+'</tr></tbody></table>'}
+const collections=[{icon:"✦",name:"The Free AI Starter Pack",desc:"Explore tools with free access or free tiers.",terms:["free"]},{icon:"◈",name:"Create Without Limits",desc:"Image, video, audio and design tools for creators.",cats:["Image & Design","Image Generation","Video","Audio & Music","Video Generation"]},{icon:"⌘",name:"Build Your Next Big Idea",desc:"Coding, app builders, models and AI infrastructure.",cats:["Coding","Website & App Builders","AI Models & APIs","AI Infrastructure"]},{icon:"✧",name:"Work Smarter, Not Longer",desc:"Tools for focus, meetings, writing and automation.",cats:["Productivity","Email","Meetings & Notes","Automation"]},{icon:"◎",name:"Grow a Business with AI",desc:"Sales, marketing, support and business operations.",cats:["Business","Marketing","Sales & CRM","Customer Support","E-commerce"]},{icon:"◇",name:"The Curious Mind",desc:"Research, education, analytics and learning.",cats:["Research","Education","Data & Analytics","AI Assistants"]}];
+$("collectionGrid").innerHTML=collections.map((c,i)=>'<button class="collection" data-collection="'+i+'" style="text-align:left;color:inherit;cursor:pointer"><div><div class="symbol">'+c.icon+'</div><h3>'+c.name+'</h3><p>'+c.desc+'</p></div><span class="eyebrow">Explore collection →</span></button>').join("");
+$("collectionGrid").addEventListener("click",e=>{const b=e.target.closest("[data-collection]");if(!b)return;const c=collections[Number(b.dataset.collection)];activeCategory="All";currentQuery="";$("globalSearch").value="";buildFilters();let list=tools.filter(t=>c.cats?c.cats.includes(t[1]):c.terms.some(term=>t[4].toLowerCase().includes(term)));$("toolGrid").innerHTML=list.map(card).join("");$("resultCount").textContent=list.length+" curated tools";$("noTools").hidden=!!list.length;$("discover").scrollIntoView({behavior:"smooth"})});
+$("categoryFilters").addEventListener("click",e=>{const b=e.target.closest("[data-category]");if(!b)return;activeCategory=b.dataset.category;buildFilters();renderTools()});
+$("toolGrid").addEventListener("click",e=>{const p=e.target.closest("[data-profile]"),a=e.target.closest("[data-add]");if(p)showProfile(Number(p.dataset.profile));if(a)addCompare(Number(a.dataset.add))});
+$("profileCompare").addEventListener("click",()=>{addCompare(Number($("profileCompare").dataset.add));$("profileModal").classList.remove("show");$("compare").scrollIntoView({behavior:"smooth"})});
+$("closeProfile").addEventListener("click",()=>$("profileModal").classList.remove("show"));$("profileModal").addEventListener("click",e=>{if(e.target===$("profileModal"))$("profileModal").classList.remove("show")});
+$("findBtn").addEventListener("click",runFinder);$("goal").addEventListener("keydown",e=>{if(e.key==="Enter")runFinder()});document.querySelectorAll("[data-prompt]").forEach(b=>b.addEventListener("click",()=>{$("goal").value=b.dataset.prompt;runFinder()}));
+function searchNow(){currentQuery=$("globalSearch").value.trim();activeCategory="All";buildFilters();renderTools();$("discover").scrollIntoView({behavior:"smooth"})}
+$("globalSearchBtn").addEventListener("click",searchNow);$("globalSearch").addEventListener("keydown",e=>{if(e.key==="Enter")searchNow()});
+$("compareBtn").addEventListener("click",doCompare);
+["compareA","compareB","compareC"].forEach((id,n)=>$(id).addEventListener("change",()=>{const values=["compareA","compareB","compareC"].map(x=>$(x).value).filter(x=>x!=="").map(Number);compareSelection=values}));
+document.addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();$("globalSearch").focus()}if(e.key==="Escape")$("profileModal").classList.remove("show")});
+buildFilters();renderTools();syncCompare();
+</script></body></html>
