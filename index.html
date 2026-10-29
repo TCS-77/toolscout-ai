@@ -92,7 +92,7 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-s
 <input id="search" type="search" placeholder="Search tools, categories or ideas..." aria-label="Search AI tools">
 <button id="searchBtn">Search →</button>
 </div>
-<p style="font-size:.8rem;margin-top:14px">Explore <span id="toolSummaryCount">96</span> AI tools across <span id="toolSummaryCategories">22</span> categories, or join the SIVELO SCOUT community and share a discovery.</p><p style="margin-top:18px"><a class="primary" href="community.html">Join the community →</a></p>
+<p style="font-size:.8rem;margin-top:14px">Explore <span id="toolSummaryCount">126</span> AI tools across <span id="toolSummaryCategories">32</span> categories, or join the SIVELO SCOUT community and share a discovery.</p><p style="margin-top:18px"><a class="primary" href="community.html">Join the community →</a></p>
 </section>
 
 <section class="wrap section">
@@ -300,7 +300,47 @@ const tools = [
 
 ["Microsoft Security Copilot","Cybersecurity","SC","AI assistant that helps security teams investigate and respond to threats.","Enterprise plans","https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-security-copilot"],
 ["Darktrace","Cybersecurity","Da","Cybersecurity platform using AI to detect and respond to threats.","Business plans","https://www.darktrace.com/"],
-["Snyk","Cybersecurity","Sy","Developer security platform with AI-assisted code and vulnerability analysis.","Free access and paid plans","https://snyk.io/"]
+["Snyk","Cybersecurity","Sy","Developer security platform with AI-assisted code and vulnerability analysis.","Free access and paid plans","https://snyk.io/"],
+
+["Superhuman","Email","Su","AI-powered email app for faster inbox and communication workflows.","Paid plans","https://superhuman.com/"],
+["Shortwave","Email","Sh","AI email client for searching, summarizing and managing your inbox.","Free access and paid plans","https://www.shortwave.com/"],
+["Lavender","Email","La","AI email assistant that helps improve sales email quality.","Free access and paid plans","https://www.lavender.ai/"],
+
+["Granola","Meetings & Notes","Gr","AI meeting notes app that turns conversations into useful notes.","Free access and paid plans","https://www.granola.ai/"],
+["Fathom","Meetings & Notes","Fa","AI meeting assistant for recording, transcription and summaries.","Free access and paid plans","https://fathom.video/"],
+["tl;dv","Meetings & Notes","tl","Record, transcribe and summarize online meetings with AI.","Free access and paid plans","https://tldv.io/"],
+
+["Lovable","Website & App Builders","Lo","Build full-stack web applications from natural-language prompts.","Free access and paid plans","https://lovable.dev/"],
+["Bolt.new","Website & App Builders","Bo","Create and run full-stack web apps directly from a prompt.","Free access and paid plans","https://bolt.new/"],
+["Framer","Website & App Builders","Fr","Design and publish websites with AI-assisted site generation.","Free access and paid plans","https://www.framer.com/"],
+
+["OpenAI API","AI Models & APIs","OA","Build applications with OpenAI models through developer APIs.","Usage-based pricing","https://platform.openai.com/"],
+["Google AI Studio","AI Models & APIs","GA","Prototype with Google's generative AI models and developer tools.","Free access; usage limits apply","https://aistudio.google.com/"],
+["Hugging Face","AI Models & APIs","HF","Discover and use open machine-learning models, datasets and demos.","Free access and paid options","https://huggingface.co/"],
+
+["Ollama","AI Infrastructure","Ol","Run and manage large language models locally on your computer.","Free and open source","https://ollama.com/"],
+["Pinecone","AI Infrastructure","Pi","Vector database platform for search and AI application retrieval.","Free tier and paid plans","https://www.pinecone.io/"],
+["Weaviate","AI Infrastructure","We","Open-source vector database for AI-powered search and applications.","Free options and paid plans","https://weaviate.io/"],
+
+["Semrush","SEO","Se","SEO and online visibility platform with AI-powered marketing features.","Paid plans and trial options","https://www.semrush.com/"],
+["Ahrefs","SEO","Ah","SEO research suite for keywords, backlinks and site performance.","Free tools and paid plans","https://ahrefs.com/"],
+["Clearscope","SEO","Cl","Content optimization platform for improving search-focused writing.","Paid plans","https://www.clearscope.io/"],
+
+["Apollo.io","Sales & CRM","Ap","Sales intelligence and outreach platform with AI-assisted workflows.","Free access and paid plans","https://www.apollo.io/"],
+["Clay","Sales & CRM","Cl","Sales prospecting and data enrichment with automated workflows.","Free access and paid plans","https://www.clay.com/"],
+["Gong","Sales & CRM","Go","Revenue intelligence platform that analyzes customer conversations.","Paid plans","https://www.gong.io/"],
+
+["Eightfold AI","HR & Recruiting","Ei","Talent intelligence platform for recruiting and workforce planning.","Enterprise plans","https://eightfold.ai/"],
+["HireVue","HR & Recruiting","Hi","Hiring platform with AI-supported assessments and interview workflows.","Business plans","https://www.hirevue.com/"],
+["Teal","HR & Recruiting","Te","Career platform with AI-assisted resumes and job search tools.","Free access and paid plans","https://www.tealhq.com/"],
+
+["Harvey","Legal","Ha","AI platform built for legal research and professional legal workflows.","Enterprise plans","https://www.harvey.ai/"],
+["Spellbook","Legal","Sp","AI contract drafting and review tools for legal professionals.","Paid plans","https://spellbook.legal/"],
+["CoCounsel","Legal","Co","AI legal assistant for research, document review and professional workflows.","Paid plans","https://www.cocounsel.com/"],
+
+["Meshy","3D & Game Development","Me","Generate 3D models and textures from text or images.","Free access and paid plans","https://www.meshy.ai/"],
+["Tripo AI","3D & Game Development","Tr","Create 3D assets from text and image prompts.","Free access and paid plans","https://www.tripo3d.ai/"],
+["Kaedim","3D & Game Development","Ka","Turn 2D concepts into production-ready 3D assets.","Paid plans","https://www.kaedim3d.com/"]
 ];
 
 const categories = ["All",...new Set(tools.map(t=>t[1]))];
