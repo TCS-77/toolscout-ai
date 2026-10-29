@@ -75,8 +75,24 @@ nav a:hover:after{right:0}
 .profile.show .profilebox{animation:modal-arrive .35s cubic-bezier(.2,.8,.2,1) both}
 @keyframes modal-arrive{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
 @media(prefers-reduced-motion:reduce){.hero:before,.hero .gradient{animation:none!important}.reveal-on-scroll{opacity:1;transform:none;filter:none;transition:none}}
+
+/* Compact line icons for the main navigation */
+nav{align-items:center;gap:20px}
+nav a{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+nav .nav-icon{width:16px;height:16px;flex:0 0 16px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;color:#a78bfa;transition:color .2s ease,transform .2s ease,filter .2s ease}
+nav a:hover .nav-icon{color:#d8b4fe;transform:translateY(-1px);filter:drop-shadow(0 0 5px #a78bfa88)}
+nav .library-trigger{padding:7px 11px}
+#compareCount{font-size:.65rem;padding:3px 7px;vertical-align:middle}
+@media(max-width:700px){nav{gap:12px}nav a{gap:5px}nav .nav-icon{width:14px;height:14px;flex-basis:14px}}
 </style></head><body>
-<header><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/sivelo-mark.svg" alt="">SIVELO <span>SCOUT</span></a><nav><a href="#finder">AI Finder</a><a href="#discover">Discover</a><a href="#" id="navLibrary" class="library-trigger">My Library</a><a href="#" id="navCompare">Compare <span id="compareCount" class="tag" style="margin-left:4px">0</span></a><a href="#collections">Collections</a><a href="community.html">Community</a></nav></div></header>
+<header><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/sivelo-mark.svg" alt="">SIVELO <span>SCOUT</span></a><nav aria-label="Main navigation">
+<a href="#finder"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3Z"/><path d="m19 14 1.1 2.9L23 18l-2.9 1.1L19 22l-1.1-2.9L15 18l2.9-1.1L19 14Z"/></svg><span>AI Finder</span></a>
+<a href="#discover"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m15.8 8.2-2.5 5.1-5.1 2.5 2.5-5.1 5.1-2.5Z"/></svg><span>Discover</span></a>
+<a href="#" id="navLibrary" class="library-trigger"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 4.5A2.5 2.5 0 0 1 8.5 2H20v17H8.5A2.5 2.5 0 0 0 6 21.5v-17Z"/><path d="M6 5H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h16"/><path d="M10 7h6"/></svg><span>My Library</span></a>
+<a href="#" id="navCompare"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 3h5v5"/><path d="m21 3-7 7"/><path d="M8 21H3v-5"/><path d="m3 21 7-7"/><path d="M14 3h-4M10 21h4"/></svg><span>Compare</span><span id="compareCount" class="tag">0</span></a>
+<a href="#collections"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 16 9 5 9-5"/></svg><span>Collections</span></a>
+<a href="community.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg><span>Community</span></a>
+</nav></div></header>
 <main>
 <section class="hero wrap"><div class="eyebrow">THE TOOLS BEHIND TOMORROW</div><h1>Find your next<br><span class="gradient">unfair advantage.</span></h1><p>Tell us what you're trying to do. Explore standout AI tools, compare your options, and find the right fit without the endless searching.</p><div class="searchbar"><input id="globalSearch" placeholder="Search tools, tasks, categories…" aria-label="Search tools"><button class="btn" id="globalSearchBtn">Explore →</button></div><div class="hint">Press <span class="kbd">Ctrl</span> + <span class="kbd">K</span> anytime to search</div></section>
 <section class="wrap section" id="finder"><div class="panel finder"><div><div class="eyebrow">SIVELO AI FINDER</div><h2>What do you want to make possible?</h2><p>Describe your goal in your own words. We'll match it to tools in the directory and explain why they fit.</p><input id="goal" placeholder="e.g. Make cinematic videos for my brand"><button class="btn" id="findBtn">Find my tools ✦</button><div class="suggestions"><button data-prompt="Build a website without coding">Build a website</button><button data-prompt="Create realistic AI videos">Create AI videos</button><button data-prompt="Automate customer support">Automate support</button><button data-prompt="Research and write better">Research & writing</button></div></div><div class="resultbox" id="finderResults"><div class="eyebrow">YOUR DISCOVERY</div><h3>Your recommendations appear here</h3><p class="muted">Start with a goal and SIVELO will surface relevant tools from its directory.</p></div></div></section>
