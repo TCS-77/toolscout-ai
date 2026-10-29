@@ -92,7 +92,7 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-s
 <input id="search" type="search" placeholder="Search tools, categories or ideas..." aria-label="Search AI tools">
 <button id="searchBtn">Search →</button>
 </div>
-<p style="font-size:.8rem;margin-top:14px">Explore 66 AI tools across 12 categories, or join the SIVELO SCOUT community and share a discovery.</p><p style="margin-top:18px"><a class="primary" href="community.html">Join the community →</a></p>
+<p style="font-size:.8rem;margin-top:14px">Explore <span id="toolSummaryCount">96</span> AI tools across <span id="toolSummaryCategories">22</span> categories, or join the SIVELO SCOUT community and share a discovery.</p><p style="margin-top:18px"><a class="primary" href="community.html">Join the community →</a></p>
 </section>
 
 <section class="wrap section">
@@ -260,7 +260,47 @@ const tools = [
 ["Power BI","Data & Analytics","BI","Business analytics and interactive data visualization.","Free options and paid plans","https://powerbi.microsoft.com/"],
 ["Julius AI","Data & Analytics","J","Analyze data and create visualizations using natural language.","Free access and paid plans","https://julius.ai/"],
 ["Obviously AI","Data & Analytics","O","No-code predictive analytics and machine learning tools.","Paid plans","https://www.obviously.ai/"],
-["DataRobot","Data & Analytics","DR","Enterprise AI and machine learning platform for analytics.","Enterprise plans","https://www.datarobot.com/"]
+["DataRobot","Data & Analytics","DR","Enterprise AI and machine learning platform for analytics.","Enterprise plans","https://www.datarobot.com/"],
+
+["Mistral Le Chat","AI Assistants","Mi","AI assistant for research, writing, coding and everyday questions.","Free access and paid plans","https://chat.mistral.ai/"],
+["Grok","AI Assistants","G","AI assistant for conversation, research and creative tasks.","Free access and paid plans","https://grok.com/"],
+["Meta AI","AI Assistants","Me","AI assistant for answering questions and creative help across Meta services.","Free access; features vary","https://www.meta.ai/"],
+
+["FLUX","Image Generation","FL","AI image models for generating detailed images from prompts.","Models and access options vary","https://blackforestlabs.ai/"],
+["Krea","Image Generation","Kr","AI creative platform for image generation, enhancement and real-time visuals.","Free access and paid plans","https://www.krea.ai/"],
+["Playground","Image Generation","Pl","AI image creation and design workspace.","Free access and paid plans","https://playground.com/"],
+
+["Kling AI","Video Generation","K","Generate AI videos and animate images from prompts.","Free credits and paid plans","https://klingai.com/"],
+["Luma Dream Machine","Video Generation","Lu","Create videos from text and images with generative AI.","Free access and paid plans","https://lumalabs.ai/dream-machine"],
+["Veo","Video Generation","V","Google's generative video model for creating video from prompts.","Access and pricing vary","https://deepmind.google/models/veo/"],
+
+["Speechify","Voice & Speech","Sp","Text-to-speech and AI voice tools for listening and narration.","Free access and paid plans","https://speechify.com/"],
+["Murf AI","Voice & Speech","Mu","Create voiceovers with AI text-to-speech voices.","Free trial and paid plans","https://murf.ai/"],
+["Deepgram","Voice & Speech","De","Speech-to-text and text-to-speech APIs for developers.","Usage-based pricing","https://deepgram.com/"],
+
+["Manus","AI Agents","Ma","General-purpose AI agent for completing multi-step tasks.","Access and pricing vary","https://manus.im/"],
+["Relevance AI","AI Agents","Re","Build and deploy AI agents and multi-step workflows.","Free access and paid plans","https://relevanceai.com/"],
+["CrewAI","AI Agents","Cr","Framework and platform for building teams of collaborating AI agents.","Open-source and paid options","https://www.crewai.com/"],
+
+["Tidio","Customer Support","Ti","Customer service platform with AI-powered support automation.","Free access and paid plans","https://www.tidio.com/"],
+["Ada","Customer Support","Ad","AI customer service automation for support conversations.","Enterprise plans","https://www.ada.cx/"],
+["Chatbase","Customer Support","Ch","Build AI support agents trained on your business content.","Free access and paid plans","https://www.chatbase.co/"],
+
+["Rask AI","Translation","Ra","AI video translation and dubbing for multilingual content.","Paid plans and trial options","https://www.rask.ai/"],
+["Maestra","Translation","Ma","AI transcription, subtitles, translation and dubbing tools.","Free trial and paid plans","https://maestra.ai/"],
+["Papago","Translation","Pa","Machine translation for text, images and conversations.","Free access","https://papago.naver.com/"],
+
+["Gamma","Presentations","Ga","Create presentations, documents and webpages with AI.","Free access and paid plans","https://gamma.app/"],
+["Beautiful.ai","Presentations","Be","Presentation software with AI-assisted slide creation and design.","Paid plans and trial options","https://www.beautiful.ai/"],
+["Pitch","Presentations","Pi","Collaborative presentation platform with AI-assisted creation.","Free tier and paid plans","https://pitch.com/"],
+
+["Ramp","Finance","Ra","Finance operations platform with automation and AI features.","Business plans","https://ramp.com/"],
+["Brex","Finance","Br","Business finance platform for cards, expenses and financial workflows.","Business plans","https://www.brex.com/"],
+["Vic.ai","Finance","Vi","AI-powered accounts payable and invoice processing automation.","Business plans","https://www.vic.ai/"],
+
+["Microsoft Security Copilot","Cybersecurity","SC","AI assistant that helps security teams investigate and respond to threats.","Enterprise plans","https://www.microsoft.com/en-us/security/business/ai-machine-learning/microsoft-security-copilot"],
+["Darktrace","Cybersecurity","Da","Cybersecurity platform using AI to detect and respond to threats.","Business plans","https://www.darktrace.com/"],
+["Snyk","Cybersecurity","Sy","Developer security platform with AI-assisted code and vulnerability analysis.","Free access and paid plans","https://snyk.io/"]
 ];
 
 const categories = ["All",...new Set(tools.map(t=>t[1]))];
@@ -350,6 +390,8 @@ document.getElementById("year").textContent=new Date().getFullYear();
 
 
 buildFilters();
+document.getElementById("toolSummaryCount").textContent = tools.length;
+document.getElementById("toolSummaryCategories").textContent = categories.length - 1;
 render();
 
 // Load approved community submissions into their own homepage section.
