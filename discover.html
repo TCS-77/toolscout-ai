@@ -106,6 +106,20 @@ h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',Georgia,serif}
 .card:hover .logo,.toolcard:hover .logo{transform:translateY(-2px) rotate(-4deg);border-color:#a78bfa;box-shadow:0 0 18px #9b72ff35}
 .card:hover .logo img,.toolcard:hover .logo img{transform:scale(1.13) rotate(4deg);filter:drop-shadow(0 0 5px #b69aff88)}
 @media(prefers-reduced-motion:reduce){.logo,.logo img{transition:none!important}}
+
+/* SIVELO entrance motion */
+@keyframes sivelo-enter{0%{opacity:0;transform:translate3d(0,22px,0) scale(.985);filter:blur(4px)}100%{opacity:1;transform:translate3d(0,0,0) scale(1);filter:blur(0)}}
+@keyframes sivelo-nav-enter{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+body>header{animation:sivelo-nav-enter .65s cubic-bezier(.2,.7,.2,1) both}
+main>.hero,main>section:first-child{animation:sivelo-enter .85s .08s cubic-bezier(.2,.7,.2,1) both}
+main>.layout,main>.section,main>section:not(:first-child){animation:sivelo-enter .75s .2s cubic-bezier(.2,.7,.2,1) both}
+.card,.toolcard,.collection,.panel{animation:sivelo-enter .65s cubic-bezier(.2,.7,.2,1) both}
+.card:nth-child(2),.toolcard:nth-child(2),.collection:nth-child(2){animation-delay:.06s}
+.card:nth-child(3),.toolcard:nth-child(3),.collection:nth-child(3){animation-delay:.12s}
+.card:nth-child(4),.toolcard:nth-child(4),.collection:nth-child(4){animation-delay:.18s}
+.card:nth-child(5),.toolcard:nth-child(5),.collection:nth-child(5){animation-delay:.24s}
+.card:nth-child(n+6),.toolcard:nth-child(n+6){animation-delay:.28s}
+@media(prefers-reduced-motion:reduce){body>header,main>.hero,main>section:first-child,main>.layout,main>.section,main>section:not(:first-child),.card,.toolcard,.collection,.panel{animation:none!important}}
 </style></head><body>
 <header><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/sivelo-mark.svg" alt="">SIVELO <span>SCOUT</span></a><nav aria-label="Main navigation">
 <a href="#finder"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3Z"/><path d="m19 14 1.1 2.9L23 18l-2.9 1.1L19 22l-1.1-2.9L15 18l2.9-1.1L19 14Z"/></svg><span>AI Finder</span></a>
