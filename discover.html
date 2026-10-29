@@ -99,6 +99,13 @@ h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',Georgia,serif}
 @media(hover:none){.toolcard:hover{transform:none}.toolcard .cardactions{position:relative;z-index:2}.toolcard .cardactions button{min-height:42px}}
 @media(max-width:560px){.searchbar{gap:5px}.searchbar input{width:0;min-width:0;padding:10px 8px;font-size:16px}.searchbar .btn{flex:0 0 auto;padding:10px 12px;font-size:.84rem}.toolcard{padding:16px}.toolcard .cardactions{gap:6px;flex-wrap:wrap}.toolcard .cardactions .btn{min-height:42px;padding:10px 9px;font-size:.78rem}.toolcard .cardactions .like-btn{min-width:42px}}
 
+
+/* Subtle brand-icon motion */
+.logo{transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
+.logo img{transition:transform .32s cubic-bezier(.2,.8,.2,1),filter .32s ease}
+.card:hover .logo,.toolcard:hover .logo{transform:translateY(-2px) rotate(-4deg);border-color:#a78bfa;box-shadow:0 0 18px #9b72ff35}
+.card:hover .logo img,.toolcard:hover .logo img{transform:scale(1.13) rotate(4deg);filter:drop-shadow(0 0 5px #b69aff88)}
+@media(prefers-reduced-motion:reduce){.logo,.logo img{transition:none!important}}
 </style></head><body>
 <header><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/sivelo-mark.svg" alt="">SIVELO <span>SCOUT</span></a><nav aria-label="Main navigation">
 <a href="#finder"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3Z"/><path d="m19 14 1.1 2.9L23 18l-2.9 1.1L19 22l-1.1-2.9L15 18l2.9-1.1L19 14Z"/></svg><span>AI Finder</span></a>
