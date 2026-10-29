@@ -25,6 +25,14 @@
 #discover .toolcard:hover{background:#171222;border-color:#62477f;box-shadow:0 12px 34px #0005}
 .sectionhead h2{font-size:clamp(1.55rem,3vw,2rem)}
 @media(max-width:700px){.feature-week{grid-template-columns:1fr;padding:26px 22px;gap:14px}.feature-week #weekCard{justify-self:start;max-width:100%}}
+
+/* SIVELO dark-surface polish: remove any browser-default light control surfaces */
+:root{color-scheme:dark;--panel:#110d1b;--panel2:#171126}
+input,select,textarea{color-scheme:dark}
+select option{background:#100d19;color:#e8e0f2}
+.searchbar,.panel,.resultbox,.profilebox,.profileprice,.mini-tool,.recent-chip,.library-tab,.comparebar select{background-color:#110d1b}
+.toolcard,.collection{background:linear-gradient(145deg,#151020,#0e0b17)}
+.feature-week{background:linear-gradient(112deg,#151020 0%,#100c19 62%,#171023 100%)}
 </style></head><body>
 <header><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/sivelo-mark.svg" alt="">SIVELO <span>SCOUT</span></a><nav><a href="#finder">AI Finder</a><a href="#discover">Discover</a><a href="#" id="navLibrary" class="library-trigger">My Library</a><a href="#" id="navCompare">Compare <span id="compareCount" class="tag" style="margin-left:4px">0</span></a><a href="#collections">Collections</a><a href="community.html">Community</a></nav></div></header>
 <main>
