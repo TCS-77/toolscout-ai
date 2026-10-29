@@ -108,6 +108,16 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-s
 </div>
 </section>
 
+
+<section class="wrap section" id="community-picks" hidden>
+<div class="heading">
+<div class="eyebrow">Community discoveries</div>
+<h2>Shared by the community</h2>
+<div class="sub">Useful AI tools submitted by the community and approved by ToolScout.</div>
+</div>
+<div class="grid" id="communityGrid"></div>
+</section>
+
 <section class="wrap section" id="tools">
 <div class="heading">
 <div class="eyebrow">The collection</div>
@@ -171,6 +181,7 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-s
 </section>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 const tools = [
 ["ChatGPT","Writing","C","AI assistant for writing, brainstorming, learning and everyday tasks.","Free tier and paid plans","https://chatgpt.com/"],
@@ -337,8 +348,85 @@ document.addEventListener("keydown",e=>{
 });
 document.getElementById("year").textContent=new Date().getFullYear();
 
+
 buildFilters();
 render();
+
+// Load approved community submissions into their own homepage section.
+const communitySupabaseUrl = "https://wtertunzlrhinxhrrdfc.supabase.co";
+const communitySupabaseKey = "sb_publishable_YoWsnFJ4iA7TRIeNrQGgLQ_2bC37KQr";
+const communitySection = document.getElementById("community-picks");
+const communityGrid = document.getElementById("communityGrid");
+
+function safeCommunityUrl(value) {
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" || url.protocol === "http:" ? url.href : null;
+  } catch {
+    return null;
+  }
+}
+
+async function loadCommunityPicks() {
+  if (!window.supabase || !communityGrid || !communitySection) return;
+  const client = window.supabase.createClient(communitySupabaseUrl, communitySupabaseKey);
+  const { data, error } = await client
+    .from("community_tools")
+    .select("name,website_url,description,category,pricing,creator_name")
+    .eq("status", "approved")
+    .order("created_at", { ascending: false })
+    .limit(6);
+
+  if (error) {
+    console.warn("Community homepage listings could not load:", error.message);
+    return;
+  }
+  if (!data || data.length === 0) return;
+
+  communityGrid.replaceChildren();
+  data.forEach(tool => {
+    const card = document.createElement("article");
+    card.className = "card";
+
+    const top = document.createElement("div");
+    top.className = "top";
+    const logo = document.createElement("div");
+    logo.className = "logo";
+    logo.textContent = (tool.name || "AI").trim().slice(0, 2).toUpperCase();
+    const tag = document.createElement("span");
+    tag.className = "tag";
+    tag.textContent = tool.category || "Community";
+    top.append(logo, tag);
+
+    const title = document.createElement("h3");
+    title.textContent = tool.name || "Community tool";
+    const description = document.createElement("p");
+    description.textContent = tool.description || "Shared by the ToolScout community.";
+    const bottom = document.createElement("div");
+    bottom.className = "bottom";
+    const price = document.createElement("span");
+    price.className = "price";
+    price.textContent = tool.pricing ? "Pricing: " + tool.pricing : "Pricing not listed";
+    const url = safeCommunityUrl(tool.website_url);
+    if (url) {
+      const link = document.createElement("a");
+      link.href = url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.className = "details";
+      link.textContent = "Visit website ↗";
+      bottom.append(price, link);
+    } else {
+      bottom.append(price);
+    }
+
+    card.append(top, title, description, bottom);
+    communityGrid.appendChild(card);
+  });
+  communitySection.hidden = false;
+}
+
+loadCommunityPicks();
 </script>
 </body>
 </html>
