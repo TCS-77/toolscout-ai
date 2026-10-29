@@ -41,28 +41,32 @@ grant update, delete on public.community_tools to authenticated;
 alter table public.profiles enable row level security;
 alter table public.community_tools enable row level security;
 
--- A helper keeps admin checks consistent. Users cannot grant themselves admin
--- because profile updates below do not allow changing is_admin.
-create or replace function public.is_toolscout_admin()
+-- Keep privileged helper functions in a non-exposed schema.
+create schema if not exists private;
+revoke all on schema private from public;
+grant usage on schema private to anon, authenticated;
+
+-- This function only returns whether the currently signed-in user is an admin.
+create or replace function private.is_toolscout_admin()
 returns boolean
 language sql
 stable
 security definer
-set search_path = public
-as $$
+set search_path = ''
+as $
   select exists (
     select 1 from public.profiles
-    where id = auth.uid() and is_admin = true
+    where id = (select auth.uid()) and is_admin = true
   );
-$$;
-
-grant execute on function public.is_toolscout_admin() to authenticated;
+$;
+revoke all on function private.is_toolscout_admin() from public;
+grant execute on function private.is_toolscout_admin() to anon, authenticated;
 
 drop policy if exists "Profiles are viewable by owner" on public.profiles;
 create policy "Profiles are viewable by owner"
   on public.profiles for select
   to authenticated
-  using (id = auth.uid() or public.is_toolscout_admin());
+  using (id = auth.uid() or private.is_toolscout_admin());
 
 drop policy if exists "Users can update their own display name" on public.profiles;
 create policy "Users can update their own display name"
@@ -75,7 +79,7 @@ drop policy if exists "Anyone can view approved community tools" on public.commu
 create policy "Anyone can view approved community tools"
   on public.community_tools for select
   to anon, authenticated
-  using (status = 'approved' or created_by = auth.uid() or public.is_toolscout_admin());
+  using (status = 'approved' or created_by = auth.uid() or private.is_toolscout_admin());
 
 drop policy if exists "Signed-in users can submit pending tools" on public.community_tools;
 create policy "Signed-in users can submit pending tools"
@@ -87,33 +91,35 @@ drop policy if exists "Admins can update community submissions" on public.commun
 create policy "Admins can update community submissions"
   on public.community_tools for update
   to authenticated
-  using (public.is_toolscout_admin())
-  with check (public.is_toolscout_admin());
+  using (private.is_toolscout_admin())
+  with check (private.is_toolscout_admin());
 
 drop policy if exists "Admins can delete community submissions" on public.community_tools;
 create policy "Admins can delete community submissions"
   on public.community_tools for delete
   to authenticated
-  using (public.is_toolscout_admin());
+  using (private.is_toolscout_admin());
 
 -- Automatically create a profile whenever someone signs up.
-create or replace function public.handle_new_toolscout_user()
+-- This trigger function is kept in the non-exposed private schema.
+create or replace function private.handle_new_toolscout_user()
 returns trigger
 language plpgsql
 security definer
-set search_path = public
-as $$
+set search_path = ''
+as $
 begin
   insert into public.profiles (id, display_name)
   values (new.id, coalesce(new.raw_user_meta_data ->> 'display_name', split_part(new.email, '@', 1)));
   return new;
 end;
-$$;
+$;
+revoke all on function private.handle_new_toolscout_user() from public;
 
 drop trigger if exists on_toolscout_auth_user_created on auth.users;
 create trigger on_toolscout_auth_user_created
   after insert on auth.users
-  for each row execute procedure public.handle_new_toolscout_user();
+  for each row execute procedure private.handle_new_toolscout_user();
 
 -- IMPORTANT: After creating your own account, make it the first admin by
 -- running this separately in the SQL Editor, replacing the email:
