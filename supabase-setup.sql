@@ -29,6 +29,15 @@ create index if not exists community_tools_status_created_at_idx
 create index if not exists community_tools_created_by_idx
   on public.community_tools(created_by);
 
+-- Restrict profile updates to the public display_name column only.
+-- This prevents users from changing their own is_admin flag through the API.
+revoke update on public.profiles from authenticated;
+grant update (display_name) on public.profiles to authenticated;
+grant select on public.profiles to authenticated;
+grant select on public.community_tools to anon, authenticated;
+grant insert on public.community_tools to authenticated;
+grant update, delete on public.community_tools to authenticated;
+
 alter table public.profiles enable row level security;
 alter table public.community_tools enable row level security;
 
