@@ -38,6 +38,18 @@ select option{background:#100d19;color:#e8e0f2}
 .like-btn{appearance:none;-webkit-appearance:none;display:inline-grid;place-items:center;min-width:40px;height:40px;padding:0 11px;border:1px solid #40304f;border-radius:11px;background:#171122!important;color:#c9b8e8!important;font-size:1.25rem;line-height:1;cursor:pointer;transition:background .18s,border-color .18s,color .18s,transform .18s}
 .like-btn:hover{background:#241936!important;border-color:#7655a6;color:#e9d5ff!important;transform:translateY(-1px)}
 .like-btn.liked{background:#2a183b!important;border-color:#8b5cf6;color:#d8b4fe!important}
+
+/* Subtle SIVELO motion */
+@keyframes sivelo-rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes sivelo-glow{0%,100%{box-shadow:0 0 0 rgba(139,92,246,0)}50%{box-shadow:0 0 34px rgba(139,92,246,.13)}}
+.hero{animation:sivelo-rise .75s cubic-bezier(.2,.7,.2,1) both}
+.feature-week{animation:sivelo-rise .7s .12s both}
+.toolcard,.collection{animation:sivelo-rise .48s cubic-bezier(.2,.7,.2,1) both}
+.toolcard:nth-child(2),.collection:nth-child(2){animation-delay:.05s}.toolcard:nth-child(3),.collection:nth-child(3){animation-delay:.1s}.toolcard:nth-child(4),.collection:nth-child(4){animation-delay:.15s}.toolcard:nth-child(5),.collection:nth-child(5){animation-delay:.2s}.toolcard:nth-child(6),.collection:nth-child(6){animation-delay:.25s}
+.btn,.chip,.like-btn,.library-tab{transition:transform .2s ease,filter .2s ease,background .2s ease,border-color .2s ease}
+.btn:active,.chip:active,.like-btn:active,.library-tab:active{transform:scale(.97)}
+.logo{transition:transform .25s ease,box-shadow .25s ease}.toolcard:hover .logo,.collection:hover .symbol{transform:scale(1.08)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 </style></head><body>
 <header><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/sivelo-mark.svg" alt="">SIVELO <span>SCOUT</span></a><nav><a href="#finder">AI Finder</a><a href="#discover">Discover</a><a href="#" id="navLibrary" class="library-trigger">My Library</a><a href="#" id="navCompare">Compare <span id="compareCount" class="tag" style="margin-left:4px">0</span></a><a href="#collections">Collections</a><a href="community.html">Community</a></nav></div></header>
 <main>
